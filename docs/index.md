@@ -1,37 +1,38 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/CaseyHeyrend/WDD330Portfolio/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/CaseyHeyrend/WDD330Portfolio/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WDD 330 portfolio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>WDD 330 portfolio</h1>
+        <h3><a href="http://www.xxstormynightxx.com/WDD330/index.html">Other Form</a></h3>
+        <h2>Block 1</h2>
+        <ol>
+      <li><a href="">Week01</a></li>
+      <li><a href="">Week02</a></li>
+      <li><a href="">Week03</a></li>
+      <li><a href="">Week04</a></li>
+    </ol>
+        <h2>Block 2</h2>
+         <ol>
+      <li><a href="">Week05</a></li>
+      <li><a href="">Week06</a></li>
+      <li><a href="">Week07</a></li>
+      <li><a href="">Week08</a></li>
+        </ol>
+        <h2>Block 3</h2>
+         <ol>
+      <li><a href="">Week09</a></li>
+      <li><a href="">Week10</a></li>
+      <li><a href="">Week11</a></li>
+      <li><a href="">Week12</a></li>
+        </ol>
+        <h2>Block 4</h2>
+         <ol>
+      <li><a href="">Week13</a></li>
+      <li><a href="">Week14</a></li>
+        </ol>
+    </body>
+</html>
