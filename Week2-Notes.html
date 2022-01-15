@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
 
+<head>
+	<meta charset="utf-8" />
+	<title>Week 2 Notes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+</head>
+
+<body>
+    <h1>JavaScript: Novice to Ninja, 2nd Edition</h1>
+    <article>
+        <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/2">Chapter 2</a></h5>
+        <h2>Programming Basics</h2>
+        <h3>Comments</h3>
+        <p>In JavaScript there are two types of comment:</p>
+        <ul>
+            <li>Single line comments starting with // and finishing at the end of the line</li>
+            <li>Multi-line comments starting with /* and finishing with */</li>
+        </ul>
+        <h3>JavaScript Grammar</h3>
+        <p>The syntax used by JavaScript is known as a C-style syntax because of its similarities with the C programming language.
+           A JavaScript program is made up of a series of statements. Each statement ends with a new line or semicolon.
+        </p>
+        <p>There’s no need to actually use a semicolon to terminate a statement because JavaScript interpreters use a process called Automatic Semicolon Insertion (ASI). 
+            This will attempt to place semicolons at the end of lines for you. 
+            However, it can be error-prone and cause a number of automated services such as code minifiers and validators to not work properly.
+        </p>
+        <h3>Reserved Words</h3>
+        <p>The following words are reserved for use by the JavaScript language and cannot be used to name variables (or function parameters and object properties that appear in later chapters):
+        abstract, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do, double, else, enum, export, extends, false, final, finally, float, for, function, goto, if, implements, import, in instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, short, static, super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, volatile, void, while, with, yield
+        </p>
+        <p>These words are reserved because many of them are used by the language itself, and you will come across them later in this book.
+Some of the reserved words are not used by the language, however; one can only assume they were planned to be used at some point, but never were. 
+There are also a few words not reserved but really should have been, as they are an important part of the language:
+      undefined, NaN, Infinity  
+        </p>
+        <h3>Primitive Data Types</h3>
+        <p>
+            JavaScript has seven different data types. Six of them are primitive data types and are listed below:</p>
+        <ul>
+        <li>String</li>
+        <li>Symbol (The symbol primitive data type was only introduced in ES6.)</li>
+        <li>Number</li>
+        <li>Boolean</li>
+        <li>Undefined</li>
+        <li>Null</li>
+        </ul>
+        <p>
+         Any value that isn’t one of the primitive data types listed above is an object. These include arrays, functions and object literals, which will be discussed in later chapters.
+         JavaScript has a special operator called <strong>typeof</strong> for finding out the type of a value.
+        </p>
+        <h3>Variables</h3>
+        <p>Variables are used in programming languages to refer to a value stored in memory.</p>
+        <h4>Declaring and Assigning</h4>
+        <p>Variables have to be declared before they can be used. 
+            From ES6 onwards, JavaScript uses the keywords <strong>const</strong> and <strong>let</strong> to declare variables. 
+            The keyword <strong>const</strong> is used when the variable will not be reassigned to another value, whereas <strong>let</strong> is used if the variable might be reassigned later in the program.
+        To assign a value to a constant or variable, we use the = operator.
+        </p>
+        
+    </article>
+    <article>
+        <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/3">Chapter 3</a></h5>
+        <h2>Arrays, Logic, and Loops</h2>
+        <h3>Arrays</h3>
+        <p>An array is an ordered list of values. To create an array literal, simply write a pair of square brackets:</p>
+        <p>const myArray = []; << []</p>
+        <h4>Initializing an Array</h4>
+        <p>We can create an empty array literal called <strong>heroes</strong> with the following code:</p>
+        <p>const heroes = [];</p>
+        <p>To access a specific value in an array, we write its position in the array in square brackets (this is known as its index). 
+           If an element in an array is empty, undefined is returned.</p>
+        <h4>Adding Values to Arrays</h4>
+        <p>To place the string 'Superman' inside the first element of our heroes array, we can assign it to element 0, like so:</p>
+        <ul>
+            <li>heroes[0] = 'Superman';</li>
+            <li>heroes[0] = 'Batman';</li>
+            <li>heroes[1] = 'Wonder Woman';</li>
+            <li>heroes[2] = 'Flash';</li>
+            <li>heroes[5] = 'Aquaman';</li>
+        </ul>
+        <p>heroes;<< ['Batman', 'Wonder Woman', 'Flash', undefined, undefined, 'Aquaman']</p>
+        <p>Here we can see that the sixth item (with an index of 5) has been filled with the string 'Aquaman'. 
+            This has made the array longer than it was before, so all the other unused slots in the array are filled by the value undefined.</p>
+        <h4>Creating Array Literals</h4>
+        <p>We can create an array literal using square brackets that already contain some initial values, so there’s no need to add each value one by one. 
+            Here's an example:</p>
+        <p>const avengers = ['Captain America', 'Iron Man', 'Thor', 'Hulk'];
+           << ['Captain America', 'Iron Man', 'Thor', 'Hulk']</p>
+        <p>You don’t even have to use the same types of items inside an array. 
+            This array contains a variety different data types, as well as an empty array object:
+        </p>
+        <p>const mixedArray = [ null, 1, [], 'two', true ];</p>
+        <h4>Removing Values from Arrays</h4>
+        <p>The <strong>delete</strong> operator will remove an item from an array:</p>
+    </article>
+    <article>
+        <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/4">Chapter 4</a></h5>
+        <h2>Functions</h2>
+        <h3>Defining a Function</h3>
+        <p>There are a number of ways to define a function in JavaScript. Three of the most common are covered below. 
+            ES6 introduced a new way to define functions, using what is known as 'arrow' notation.</p>
+        <h4>Function Declarations</h4>
+        <p>To define a function literal we can use a <strong>function</strong> declaration:</p>
+        <p>function hello(){
+        console.log('Hello World!');
+        }
+        </p>
+        <p>This starts with the function keyword and is followed by the name of the <strong>function</strong>, which in this case is called ' <strong>hello</strong> ', followed by parentheses. 
+            Following this is a block that contains the code for the function.</p>
+        <h4>Function Expressions</h4>
+        <p>Another way of defining a function literal is to create a function expression. This assigns an anonymous function to a variable:</p>
+        <p>const goodbye = function(){
+           console.log('Goodbye World!');
+}          };
+        </p>
+        <h4>Function() Constructors</h4>
+        <p>A function can also be declared using the constructor <strong>Function()</strong>. 
+            The body of the function is entered as a string, as shown in this example:</p>
+        <p>const hi = new Function('console.log("Hi World!");');</p>
+        <p>It's not recommended to declare functions in this way as there are numerous problems associated with placing the function body inside a string. 
+            Even in this simple example, we had to use different quotation marks for the console.log method, as those used for defining the function body itself. 
+            Functions created this way are also created in the global scope, regardless of where they are actually declared. 
+            This can lead to some strange and unexpected behavior.</p> 
+        <h3>Invoking a Function</h3>
+        <p></p>
+    </article>
+    <br>
+    <br>
+    <br>
+            <footer>
+            <ul>
+                <li><a href="index.html">Week 2</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
