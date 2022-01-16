@@ -58,7 +58,159 @@ There are also a few words not reserved but really should have been, as they are
             The keyword <strong>const</strong> is used when the variable will not be reassigned to another value, whereas <strong>let</strong> is used if the variable might be reassigned later in the program.
         To assign a value to a constant or variable, we use the = operator.
         </p>
-        
+        <h4>Scope</h4>
+        <p>Scope is an important concept in programming. It refers to where a constant or variable is accessible by the program. 
+            There are two common scopes that are often referred to in programs: global scope and local scope.</p>
+        <h4>Global Scope</h4>
+        <p>Any variable declared outside of a block is said to have <strong>global scope</strong>. 
+            This means it is accessible everywhere in the program. 
+            While this may seem to be a good idea at first, it is not considered good practice.</p>
+        <h4>Local Scope</h4>
+        <p>In ES6, blocks can be used to create a local scope. 
+            This means that any variables defined inside a block using the let or const will only be available inside that block and not be accessible outside of that block. 
+            This is known as having local scope, as the variable is only visible in the locality of the block.</p>
+        <h3>Naming Constants & Variables</h3>
+        <p>When naming constants and variables, you should try to give them sensible names that describe what the variable represents; hence, answer is a better variable name than x.
+            Constant and variable names can start with any upper or lower-case letter, an underscore, _, or dollar character, $. 
+            They can also contain numbers, but cannot start with them.Here are some valid examples:</p>
+        <ul>
+            <li>$name</li>
+            <li>_answer</li>
+            <li>firstName</li>
+            <li>last_name</li>
+            <li>address_line1</li>
+        </ul>
+        <p>When using multiple words for constant and variable names there are two conventions:
+            <strong>Camel case</strong> starts with a lowercase letter and then each new word is capitalized:firstNameAndLastName</p>
+        <p><strong>Underscore</strong> separates each new word with an underscore:first_name_and_last_name</p>
+        <h3>Direct Assignment and Assignment By Reference</h3>
+        <p>When you assign a primitive value to a variable, any changes you make are made directly to that value:
+            const a = 1;
+            let b = a; // a = 1, b = 1
+            b = 2; // a = 1, b = 2
+        </p>
+        <h3>Strings</h3>
+        <p>A string is a collection of characters, such as letters and symbols. 
+            We can create a string literal by writing a group of characters inside quote marks like this:'hello'</p>
+        <h4>Backslashes</h4>
+        <p>The backslash is used to escape special characters in strings such as:</p>
+        <ul>
+            <li>Single quote marks \'</li>
+            <li>Double quote marks \"</li>
+            <li>End of line \n</li>
+            <li>Carriage return \r</li>
+            <li>Tab \t</li>
+        </ul>
+        <h3>String Properties and Methods</h3>
+        <p>Primitive data types and objects have properties and methods. 
+            Properties are information about the object or value, while methods perform an action on the object or value ― either to change it or to tell us something about it.
+        </p>
+        <h3>Symbols</h3>
+        <p>Symbols were introduced as a new primitive value in ES6. 
+           They can be used to create unique values, which helps to avoid any naming collisions.</p>
+        <h3>Numbers</h3>
+        <p>Numbers can be integers (whole numbers, such as 3) or floating point numbers (often referred to as just 'decimals' or 'floats', such as 3.14159).</p>
+        <h4>Octal and Hexadecimal Numbers</h4>
+        <p>If a number starts with a 0x, it is considered to be in hexadecimal (base 16) notation:
+            0xAF; // A represents 10, F represents 15 << 175</p>
+        <h4>Exponential Notation</h4>
+        <p>Numbers can also be represented in exponential notation, which is shorthand for "multiply by 10 to the power of" (you may have heard this referred to as "scientific notation" or "standard form"). 
+        1e6; // means 1 multiplied by 10 to the power 6 (a million)<< 1000000.
+        2E3; // 2 multiplied by 10^3 (two thousand)<< 2000.
+        </p>
+        <h3>Number Methods</h3>
+        <p>Numbers also have some built-in methods, although you need to be careful when using the dot notation with number literals that are integers because JavaScript will confuse the dot with a decimal point. 
+            Don't worry though, there are a few ways to deal with this, which we’ll demonstrate with the toExponential() method; this returns the number as a string in exponential notation.</p>
+        <p>
+          The toPrecision() method rounds a number to a fixed number of significant figures that is once again returned as a string (and often using exponential notation)  
+        </p>
+        <h4>Arithmetic Operations</h4>
+        <p>All the usual arithmetic operations can be carried out in JavaScript.</p>
+        <ul>
+            <li>Addition</li>
+            <li>Subtraction</li>
+            <li>Multiplication</li>
+            <li>Division</li>
+            <li>Exponentiation</li>
+        </ul>
+        <h3>Changing The Value of Variables</h3>
+        <h4>Incrementing Values</h4>
+        <p>If you only want to increment a value by 1, you can use the ++ operator.</p>
+        <h4>Infinity</h4>
+        <p>Infinity is a special error value in JavaScript that is used to represent any number that is too big for the language to deal with. 
+           The biggest number that JavaScript can handle is 1.7976931348623157e+308</p>
+        <p>There is also a value -Infinity, which is used for negative numbers that go below -1.7976931348623157e+308</p>
+        <p>The value of Infinity can also be obtained by dividing by zero</p>
+        <p>The smallest number that JavaScript can deal with is 5e-324. Anything below this evaluates to either 5e-324 or zero</p>
+        <h4>NaN</h4>
+        <p>NaN is an error value that is short for "Not a Number"</p>
+        <h4>Checking a Value is a Number</h4>
+        <p>You can check if a value is a number that can be used by using the Number.isFinite() method. 
+           This will return true if the value is a number that isn't Infinity, -Infinity or NaN</p>
+        <h3>Type Coercion</h3>
+        <p>Type coercion happens when the operands of an operator are of different types. 
+            In this case, JavaScript will attempt to convert one operand to an equivalent value of the other operand's type.</p>
+        <h3>Converting Between Strings and Numbers</h3>
+        <p>We can convert numbers to strings and vice versa using a variety of methods.</p>
+        <h4>Converting Strings to Numbers</h4>
+        <p>The best way to change a string to a number is to use the Number method. 
+            This will convert the string form of a number into an actual number</p>
+        <h4>Converting Numbers to Strings</h4>
+        <p>The preferred way of changing a number to a string is to use the String function</p>
+        <h4>Parsing Numbers</h4>
+        <p>There is also a useful function called <strong>parseInt()</strong> that can be used to convert a string representation of a numerical value back into a number. </p>
+        <h3>Undefined</h3>
+        <p>Undefined is the value given to variables that have not been assigned a value. 
+            We've already seen it used earlier in this chapter when variables are declared without being assigned a value. 
+            It can also occur if an object’s property doesn’t exist or a function has a missing parameter. 
+            It is basically JavaScript’s way of saying "I can’t find a value for this."</p>
+        <h3>Null</h3>
+        <p>Null means 'no value'. It can be thought of as a placeholder that JavaScript uses to say "there should be a value here, but there isn’t at the moment."
+            If this reminds you a lot of undefined then this is because they are both 'non-value' values, meaning they are similar, but behave slightly differently. </p>
+        <h3>Booleans</h3>
+        <p>There are only two Boolean values: true and false. They are named after George Boole, an English mathematician who worked in the field of algebraic logic. 
+            Boolean values are fundamental in the logical statements that make up a computer program. 
+            Every value in JavaScript has a Boolean value and most of them are true (these are known as truthy values).</p>
+        <h3>Logical Operators</h3>
+        <p>A logical operator can be used with any primitive value or object. The results are based on whether the values are considered to be truthy or falsy.</p>
+        <h4>! (Logical NOT)</h4>
+        <p>Placing the ! operator in front of a value will convert it to a Boolean and return the opposite value. 
+            So truthy values will return false, and falsy values will return true.</p>
+        <p>You can use double negation (!!) to find out if a value is truthy or falsy (it is a shortcut to using the Boolean function we employed earlier because you are effectively negating the negation)</p>
+        <h4>&& (Logical AND)</h4>
+        <p>The logical AND operator works on two or more values (the operands) and only evaluates to true if all the operands are truthy. 
+            The value that is returned is the last truthy value if they are all true, or the first falsy value if at least one of them is false</p>
+        <h4>|| (Logical OR)</h4>
+        <p>The logical OR operator also works on two or more operands, but evaluates to true if any of the operands are true, so it only evaluates to false if both operands are falsy. 
+            The value that is returned is the first truthy value if any of them are true, or the last falsy value if all of them are false:</p>
+        <h4>Lazy Evaluation</h4>
+        <p>you only check the minimum number of criteria that needs to be met. 
+            JavaScript performs a similar task and uses lazy evaluation when processing the logical AND and OR operators. 
+            This means it stops evaluating any further operands once the result is clear.</p>
+        <h3>Bitwise Operators</h3>
+        <p>Bitwise operators work with operands that are 32-bit integers. 
+           These are numbers written in binary (base two) that have 32 digits made up of just 0 s and 1 s. </p>
+        <h4>Bitwise NOT</h4>
+        <p>The bitwise NOT operator ~ will convert the number to a 32-bit integer, then change all the 1 s to 0 and all the 0 s to 1 s. It then returns the new value as an integer.</p>
+        <h4>Bitwise AND</h4>
+        <p>The bitwise AND operator, &, will convert both numbers into binary, and returns a number that in binary has a 1 in each position for which the corresponding bits of both operands are 1 s.</p>
+        <h4>Bitwise OR</h4>
+        <p>There is also the bitwise OR operator, |, which will convert both numbers into binary and return a number that in binary has a 1 in each position for which the corresponding bits of either operands are 1 s.</p>
+        <h4>Bitwise XOR</h4>
+        <p>Another operation is the bitwise XOR operator, ^, which stands for "eXclusive OR". This will convert both numbers into binary and return a number that in binary has a 1 in each position for which the corresponding bits of either operands are 1s, but not both 1 s. </p>
+        <h4>Bitwise Shift Operators</h4>
+        <p>The bitwise shift operators, << and >>, will move the binary representation a given number of places to the right or left, which effectively multiplies or divides the number by powers of two</p>
+        <h3>Comparison</h3>
+        <p>We often need to compare values when programming. JavaScript has several ways to compare two values.</p>
+        <h4>Equality</h4>
+        <p>We used the = operator to do this, which would be the logical choice for testing if two values are equal.</p>
+        <h4>Soft Equality</h4>
+        <p>We can check if answer is in fact equal to 5 using the soft, or lenient, equality operator ==, like so</p>
+        <h4>Hard Equality</h4>
+        <p>The hard, or strict, equality operator, ===, tests for equality but only returns true if and only if they are of the same data type</p>
+        <h4>Inequality</h4>
+        <p>There is a soft inequality operator, != and a hard inequality operator, !==. 
+            These work in a similar way to the soft and hard equality operators</p>
     </article>
     <article>
         <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/3">Chapter 3</a></h5>
@@ -94,6 +246,56 @@ There are also a few words not reserved but really should have been, as they are
         <p>const mixedArray = [ null, 1, [], 'two', true ];</p>
         <h4>Removing Values from Arrays</h4>
         <p>The <strong>delete</strong> operator will remove an item from an array:</p>
+        <h4>Destructuring Arrays</h4>
+        <p><strong>Destructuring</strong> an array is the concept of taking values out of an array and presenting them as individual values.</p>
+        <h4>Array Properties and Methods</h4>
+        <p>Arrays are a powerful weapon in a JavaScript ninja’s toolkit and have some useful methods.</p>
+        <h4>Pop, Push, Shift, and Unshift</h4>
+        <p>To remove the last item from an array, we can use the <strong>pop()</strong> method.
+           The<strong> shift()</strong> method works in a similar way to the <strong>pop()</strong> method, but this removes the first item in the array.
+           The <strong>push()</strong> method appends a new value to the end of the array.
+           The return value is the new length of the array. 
+           The <strong>unshift()</strong> method is similar to the <strong>push()</strong> method, but this appends a new item to the beginning of the array
+        </p>
+        <h4>Merging Arrays</h4>
+        <p>The <strong>concat()</strong> method can be used to merge an array with one or more arrays.</p>
+        <p>An alternative is to use the new <strong>spread</strong>  operator that was added to ES6. 
+            The <strong>spread</strong> operator is three dots, <strong>...</strong> that are placed in front of an array, with the effect of spreading out the elements of that array. </p>
+        <h4>The join() Method</h4>
+        <p>The <strong>join()</strong> method can be used to turn the array into a string that comprises all the items in the array, separated by commas.</p>
+        <h4>Slicing and Splicing</h4>
+        <p>The <strong>slice()</strong> method creates a subarray; effectively chopping out a slice of an original array, starting at one position and finishing at another.
+            The <strong>splice()</strong> method removes items from an array then inserts new items in their place.
+            The <strong>splice()</strong> method can also be used to insert values into an array at a specific index without removing any items, by indicating that zero items are to be removed</p>
+        <h4>Reverse</h4>
+        <p>We can reverse the order of an array using the <strong>reverse()</strong> method.</p>
+        <h4>Sort</h4>
+        <p>We can sort the order of an array using the <strong>sort()</strong> method.</p>
+        <h4>Finding if a Value is in an Array</h4>
+        <p>We can find out if an array contains a particular value using the <strong>indexOf()</strong> method to find the first occurrence of a value in an array. 
+            ES6 also introduced the <strong>includes()</strong> method. </p>
+        <h4>Multidimensional Arrays</h4>
+        <p>ou can even have an array of arrays, known as a multidimensional array. This could be used to create a coordinate system.</p>
+        <h3>Sets</h3>
+        <p>Sets were introduced to the specification in ES6. A set is a data structure that represents a collection of unique values, so it cannot include any duplicate values.</p>
+        <h4>Creating Sets</h4>
+        <p>An empty set is created using the new operator and Set() constructor.</p>
+        <h4>Adding Values to Sets</h4>
+        <p>Values can be placed into a set using the add method.Multiple items can be added to the set by repeating the add() method.</p>
+        <h4>Set Methods</h4>
+        <p>The number of values in a set can be found using the size() method.The has() method can be used to check if a value is in a set. This returns a boolean value of true or false.
+        The has() method that sets use is a very efficient operation and much faster than using the includes() or indexOf() methods to check if a value is in an array, as can be seen in this benchmark test.</p>
+        <h4>Removing Values From Sets</h4>
+        <p>The delete() method can be used to remove a value from a set. The clear() method can be used to remove all values from a set.</p>
+        <h3>Converting Sets to Arrays</h3>
+        <p>A set can be converted into an array by placing the set, along with the spread operator directly inside an array literal.</p>
+        <h3>Maps</h3>
+        <p>Maps were another data structure introduced in the ES6 specification. They are a convenient way of keeping a list of key and value pairs, and are similar to 'hashes', or 'hash tables' or 'dictionaries' in other programming languages.</p>
+        <h3>Logic</h3>
+        <p>In this section, we’ll begin to look at logical conditions that allow you to control the flow of a program by running different blocks of code, depending on the results of certain operations.</p>
+        <h3>Loops</h3>
+        <p>Loops will repeat a piece of code over and over again according to certain conditions.</p>
+        
     </article>
     <article>
         <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/4">Chapter 4</a></h5>
@@ -124,15 +326,18 @@ There are also a few words not reserved but really should have been, as they are
             Functions created this way are also created in the global scope, regardless of where they are actually declared. 
             This can lead to some strange and unexpected behavior.</p> 
         <h3>Invoking a Function</h3>
-        <p></p>
+        <p>Invoking a function is to run the code inside the function’s body. 
+            To invoke a function, simply enter its name, followed by parentheses. 
+            Remember: you need parentheses to invoke a function ― either by name or by reference to the variable it is assigned to.</p>
+        <h3>Return Values</h3>
+        <p>All functions return a value, which can be specified using the return statement, which comes after the return keyword. A function that doesn’t explicitly return anything (such as all the examples we have seen so far) will return undefined by default.</p>
+        <h3>Parameters and Arguments</h3>
+        <p>Parameters and arguments are terms that are often used interchangeably to represent values provided for the function as an input. There is a subtle difference though: any parameters a function needs are set when the function is defined. 
+            When a function is invoked, it is provided with arguments.</p>
+        <h3>Callbacks</h3>
+        <p>A function that is passed as an argument to another is known as a callback.</p>
+        <h3>Array Iterators</h3>
+        <p>Arrays have a number of methods that utilize callbacks to make them more flexible.</p>
     </article>
-    <br>
-    <br>
-    <br>
-            <footer>
-            <ul>
-                <li><a href="index.html">Week 2</a></li>
-            </ul>
-        </footer>
     </body>
 </html>
