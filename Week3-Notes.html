@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Week 3 Notes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+</head>
+
+<body>
+    <h1>JavaScript: Novice to Ninja, 2nd Edition</h1>
+    <article>
+       <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/5">Chapter 5</a></h5>
+       <h2>Objects</h2>
+       <h3>Object Literals</h3>
+       <p>An object in JavaScript is a self-contained set of related values and functions. 
+           They act as a collection of named properties that map to any JavaScript value such as strings, numbers, booleans, arrays and functions. 
+           If a property’s value is a function, it is known as a method.</p>
+       <h3>Creating Objects</h3>
+       <p>To create an object literal, simply enter a pair of curly braces.</p>
+       <h4>Accessing Properties</h4>
+       <p>You can access the properties of an object using the dot notation that we’ve already seen in previous chapters. 
+           This will return the value of that property,</p>
+       <h4>Computed Properties</h4>
+       <p>The ability to create objects with computed property keys was introduced in ES6. 
+           This means that JavaScript code can be placed inside square brackets and the property key will be the return value of that code.</p>
+       <h3>Calling Methods</h3>
+       <p>To call an object’s method we can also use dot or bracket notation. Calling a method is the same as invoking a function.</p>
+       <h3>Checking if Properties or Methods Exist</h3>
+       <p>The in operator can be used to check whether an object has a particular property.</p>
+       <h3>Finding all the Properties of an Object</h3>
+       <p>We can loop through all of an object’s properties and methods by using a for in loop. </p>
+       <h4>Adding Properties</h4>
+       <p>New properties and methods can be added to objects at any time in a program. </p>
+       <h3>Removing Properties</h3>
+       <p>Any property can be removed from an object using the delete operator.</p>
+       <h3>Nested Objects</h3>
+       <p>It’s even possible for an object to contain other objects. These are known as nested objects.</p>
+       <h4>Objects as Parameters to Functions</h4>
+       <p>An object literal can be passed as a parameter to a function. 
+           This is useful when there are a large number of parameters, as it allows the arguments to be provided by name and in any order. 
+           This means you don't have to remember the order to enter them when invoking a function.</p>
+       <h3>Namespacing</h3>
+       <p>Naming collisions occur when the same variable or function name is used for different purposes by code sharing the same scope. 
+           This might not seem likely, but imagine if you have lots of code that has been created over time – you might end up reusing a variable name without realizing.
+           The problem becomes more likely if you use code libraries from other developers or work on code in teams, as you might choose the same name for a function as another member of the team.</p>
+       <p>A solution to this problem is to use the object literal pattern to create a namespace for groups of related functions. 
+           This is done by creating an object literal that serves as the namespace, then adding any values as properties of that object, and any functions as methods.</p>
+       <h3>Built-in Objects</h3>
+       <p>We’ve already seen the two main built-in objects included in JavaScript: arrays and functions. 
+           JavaScript has a number of other built-in global objects that can be accessed from anywhere in a program. 
+           They provide a number of useful properties and methods that we’ll cover in this section.</p>
+       <h4>JSON</h4>
+       <p><strong>JavaScript Object Notation, or JSON</strong>, was invented by Douglas Crockford in 2001. 
+           It is an extremely popular lightweight data-storage format that is used by a large number of services for data serialization and configuration. 
+           It is often used to exchange information between web services, and is employed by sites such as Twitter, Facebook and Trello to share information. 
+           The beauty of JSON is that it manages to hit the sweet spot between being both human- and machine-readable.</p>
+       <h3>Character Groups</h3>
+       <p>Groups of characters can be placed together inside square brackets. 
+           This character group represents any one of the characters inside the brackets. </p>
+       <h4>Regular Expression Properties</h4>
+       <p>Regular expressions are objects, and have the following properties:</p>
+       <ul>
+           <li>The global property makes the pattern return all matches. By default, the pattern only looks for the first occurrence of a match.</li>
+           <li>The ignoreCase property makes the pattern case-insensitive. By default, they are case sensitive.</li>
+           <li>The multiline property makes the pattern multiline. By default, a pattern will stop at the end of a line.</li>
+       </ul>
+       <p>The following flags can be placed after a regular expression literal to change the default properties:</p>
+       <ul>
+           <li>g sets the global property to true</li>
+           <li>i sets the ignoreCase property to true</li>
+           <li>m sets the multiline property to true</li>
+       </ul>
+       <h4>Special Characters</h4>
+       <p>In a regular expression, there are a number of characters that have a special meaning, commonly known as metacharacters:</p>
+       <ul>
+           <li>. matches any character, except line breaks</li>
+           <li>\w matches any word character, and is equivalent to [A-Za-z0-9_]</li>
+           <li>\W matches any non-word character, and is equivalent to [\^A-Za-z0-9_]</li>
+           <li>\d matches any digit character, and is equivalent to [0-9]</li>
+           <li>\D matches any non-digit character, and is equivalent to [^0-9]</li>
+           <li>\s matches any whitespace character, and is equivalent to [ \t\r\n\f]</li>
+           <li>\S matches any non-whitespace character, and is equivalent to [^ \t\r\n\f]</li>
+       </ul>
+       <h4>Modifiers</h4>
+       <p>Modifiers can be placed after a token to deal with multiple occurrences of that token:</p>
+       <ul>
+           <li>? makes the preceding token in the regular expression optional</li>
+           <li>* matches one or more occurrences of the preceding token</li>
+           <li>+ matches one or more occurrences of the preceding token</li>
+           <li>{n} matches n occurrences of the preceding token</li>
+           <li>{n,} matches at least n occurrences of the pattern</li>
+           <li>{,m} matches at most m occurrences of the preceding token</li>
+           <li>{n,m} matches at least n and at most m occurrences of the preceding token</li>
+           <li>^ marks the position immediately before the first character in the string</li>
+           <li>$ marks the position immediately after the last character in the string</li>
+       </ul>
+    </article>
+    <br>
+    <article>
+        <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/6">Chapter 6</a></h5>
+        <h2>The Document Object Model</h2>
+        <h3>What is the DOM?</h3>
+        <p>The Document Object Model, or DOM for short, represents an HTML document as a network of connected nodes that form a tree-like structure.
+        The DOM treats everything on a web page as a node. HTML tags, the text inside these tags, even the attributes of a tag are all nodes. 
+        The HTML tag is the root node, and every other part of the document is a child node of this.</p>
+        <h3>History of the DOM</h3>
+        <p>In the early days of the web, browser vendors such as Netscape and Microsoft developed their own distinct ways of accessing and altering parts of a web page. 
+            In the beginning, they tended to focus on common page elements such as images, links and forms – this was known as Dynamic HTML (DHTML). 
+            These methods became known as DOM level 0, or legacy DOM. Some of the more common methods, such as those used for selecting images and forms, can still be used in the current DOM.</p>
+        <p>The World Wide Web Consortium (W3C) started to standardize the process, and created the DOM level 1 in 1998. 
+            This introduced a complete model for web pages that allowed every part of them to be navigated.</p>
+        <p>The DOM level 2 specification was published in 2000 and introduced the popular getElementById() method, which made it much easier to access specific elements on a web page. 
+            The DOM level 3 specification was published in 2004, and since then the W3C has abandoned using levels. 
+            The DOM specification is developed as a living standard.</p>
+        <h3>An Example Web Page</h3>
+        <p>
+         To illustrate the DOM concepts covered in this chapter, we’ll use a basic web page that contains a heading and three paragraph elements.
+        </p>
+        <h3>Getting Elements</h3>
+        <p>The DOM provides several methods that allow us to access any element on a page. 
+            These methods will return a node object or a node list, which is an array-like object. 
+            These objects can then be assigned to a variable and be inspected or modified.</p>
+        <h4>Legacy DOM Shortcut Methods</h4>
+        <p>There are some methods from DOM Level 0 that can still be employed to access commonly used elements. These include:</p>
+        <ul>
+            <li>Document.body returns the body element of a web page, as we saw in the previous example.</li>
+            <li>Document.images returns a node list of all the images contained in the document.</li>
+            <li>Document.links returns a node list of all the a elements and area elements that have an href attribute.</li>
+            <li>Document.anchors returns a node list of all the a elements that have a name attribute.</li>
+            <li>Document.forms returns a node list of all the forms in the document.</li>
+        </ul>
+        <br>
+        <h3>Setting An Element’s Attributes</h3>
+        <p>The setAttribute can change the value of an element’s attributes. 
+            It takes two arguments: the attribute that you wish to change, and the new value of that attribute.</p>
+        <h3>Updating CSS</h3>
+        <p>Every element node has a style property. This can be used to dynamically modify the presentation of any element on a web page.</p>
+        <h3>Chapter Summary</h3>
+        <ul>
+            <li>The Document Object Model is a way of representing a page of HTML as a tree of nodes.</li>
+            <li>The document.getElementById(), document.getElementsByClassName(), document.getElementsByTagNames() and document.querySelector() can be used to access elements on a page.</li>
+            <li>The parentNode(), previousSibling(), nextSibling(), childNodes() and children() methods can be used to navigate around the DOM tree.</li>
+            <li>An element’s attributes can be accessed using the getAttribute() method, and updated using the setAttribute() method.</li>
+            <li>The createElement() and createTextNode() methods can be used to create dynamic markup on the fly.</li>
+            <li>Markup can be added to the page using the appendChild() and insertBefore() methods.</li>
+            <li>Elements can be replaced using the replaceChild() method, and removed using the removeChild() method.</li>
+            <li>The innerHTML property can be used to insert raw HTML directly into the DOM.</li>
+            <li>The CSS properties of an element can be changed by accessing the style property.</li>
+        </ul>
+    </article> 
+    <br>
+    <article>
+        <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/7">Chapter 7</a></h5>
+        <h2>Events</h2>
+        <h3>Event Listeners</h3>
+        <p>Event listeners in JavaScript work in much the same way. 
+            They are like setting a notification to alert you when something happens. Instead of the program having to constantly check to see if an event has occurred, the event listener will let it know when the event happens, and the program can then respond appropriately. 
+            This allows the program to continue with other tasks while it waits for the event to happen.</p>
+        <h3>The Event Object</h3>
+        <p>Whenever an event handler is triggered by an event, the callback function is called. 
+           This function is automatically passed an event object as a parameter that contains information about the event.</p>
+        <h3>Types of Events</h3>
+        <p>There are several types of events, ranging from when a video has finished playing to when a resource has completed downloading. 
+            You can see a<a href="https://developer.mozilla.org/en-US/docs/Web/Events">full list on the Events page of the Mozilla Developer Network.</a></p>
+        <h4>Mouse Events</h4>
+        <p>We have already seen the click event that occurs when a mouse button is clicked. 
+            There are also the mousedown and mouseup events. 
+            These both occur before a click event is fired.</p>
+        <h4>Keyboard Events</h4>
+        <p>Three events that occur when a user presses a key are: keydown, keypress and keyup. 
+            When a user presses a key, the events occur in that order. 
+            They are not tied to any particular key, although the information about which key was pressed is a property of the event object.</p>
+        <ol>
+            <li>The keydown event occurs when a key is pressed and will continue to occur if the key is held down.</li>
+            <li>The keypress event occurs after a keydown event but before a keyup event. 
+                The keypress event only occurs for keys that produce character input (plus the 'Delete' key). 
+                This means that it’s the most reliable way to find out the character that was pressed on the keyboard.</li>
+            <li>The keyup event occurs when a key is released.</li>
+        </ol>
+        <h4>Modifier Keys</h4>
+        <p>Pressing the modifier keys such as Shift, Ctrl, Alt and meta (Cmd on Mac) will fire the keydown and keyup events, but not the keypress event as they don't produce any characters on the screen.</p>
+        <h4>Touch Events</h4>
+        <p>Many modern devices now support touch events. These are used on smartphones and tablets, as well as touch-screen monitors, satellite navigators and trackpads. 
+            Touch events are usually made with a finger, but can also be by stylus or another part of the body. 
+            There are a number of touch events that cover many types of touch interactions.</p>
+        <h4>Touch Event Properties</h4>
+        <p>Because it’s possible to touch a surface many times at once, touch event objects have a property called touches. 
+            This is a list of touch objects that represents all the touches taking place on that device. It has a length property that tells you how many touch points (usually the user's fingers, but could be a stylus) are in contact with the surface. 
+            Each touch object in the list can be accessed using index notation. For example, if a user touches the screen with two fingers, events.touches.length would return 2. 
+            The first touch object can be accessed using events.touches[0] and the second using events.touches[1].</p>
+        <br>
+        <h3>Removing Event Listeners</h3>
+        <p>An event listener can be removed using the <strong>removeEventListener()</strong> method. </p>
+        <h3>Stopping Default Behavior</h3>
+        <p>Some elements have default behavior associated with certain events. For example, when a user clicks on a link, the browser redirects to the address in the<strong>href</strong> attribute and a form is submitted when the user clicks on the Submit button.
+        <strong>preventDefault()</strong> is a method of the event object that can be used inside the callback function to stop the default behavior happening. </p>
+        <h3>Event Propagation</h3>
+        <p>When you click on an element, you are actually clicking on all the elements it’s nested inside of.</p>
+        <h3>Event Delegation</h3>
+        <p>Event delegation can be used to attach an event listener to a parent element in order to capture events that are triggered by its child elements.</p>
+    </article>
+    </body>
+</html>
