@@ -22,6 +22,61 @@
             <li><strong>textarea</strong> elements for longer text entry</li>
             <li><strong>button</strong> elements for submitting and resetting forms</li>
         </ul>
+        <h3>Input Fields</h3>
+        <p>Input fields are the most common types of form control, but there are several categories of input field as you’ll soon see.</p>
+        <h4>Text Input Fields</h4>
+        <p>The default type of input field is text, which is used for entering a short piece of text, such as a username.</p>
+        <h4>Password Input Fields</h4>
+        <p>input type='password' is used to enter passwords or secret information. 
+           This works in the same way as an input field with type='text', except the characters are concealed as they are entered so they’re unable to be read on the screen.</p>
+        <h4>Checkbox Input Fields</h4>
+        <p>Check boxes are created using input fields with type='checkbox'. 
+            They are used to select different options that can be checked (true) or left unchecked (false). 
+            The user can select more than one checkbox from a list.</p>
+        <h4>Radio Button Input Fields</h4>
+        <p>Radio buttons are created using input fields with type='radio'. 
+            Like checkboxes they allow users to check an option as true, but they provide an exclusive choice of options, so only one option can be selected.</p>
+        <h4>Hidden Input Fields</h4>
+        <p>Hidden fields can be created using input fields with type='hidden'. 
+           These are not displayed by the browser, but have a 'value' attribute that can contain information that is submitted with the form. 
+           They are often used to send information such as settings or information that the user has already provided. 
+           Note that the information in these fields is in no way secret, as it’s visible in the HTML, so shouldn’t be used for sensitive data. 
+           The value of a hidden input field can be changed using JavaScript in the same was as any other input field.</p>
+        <h4>File Input Fields</h4>
+        <p>A file input field can be created using input fields with type='file'. 
+           These are used to upload files, and most browsers will provide a browse button or similar that lets users select a file from their file system.</p>
+        <h4>Other Input Types</h4>
+        <p>There are lots of new input types included in HTML5, such as number, tel and color. 
+            As browsers start to support these, they will implement different user-interface elements depending on the input type. 
+            So a number field might use a slider, whereas a date field will show a calendar. 
+            They will also validate automatically, so an email input field will show an error message if there’s no valid email address.</p>
+        <h4>Select Drop-Down List</h4>
+        <p>Select drop-down lists can be used to select one or more options from a list of values. 
+            The 'multiple' attribute is required if more than one option is to be selected. </p>
+        <h4>Text Areas</h4>
+        <p>A textarea element is used to enter long pieces of text over multiple lines such as a comment or blog post. 
+           They work in much the same way as input fields. We access them using the 'name' attribute, and use the value property to see what text was entered.</p>
+        <h4>Buttons</h4>
+        <p>We’ve already used a button to submit a form, but there are different types of buttons. 
+           The default type is 'submit', which is why we didn’t have to specify the type in the search example at the start of the chapter. 
+           Another type we’ve already seen is 'reset', which will reset all the form fields to their initial settings.</p>
+        <h3>Form Validation</h3>
+        <p>Form validation is the process of checking whether a user has entered the information into a form correctly. 
+            Examples of the types of validation that occur include ensuring that:</p>
+        <ul>
+            <li>A required field is completed</li>
+            <li>An email address is valid</li>
+            <li>A number is entered when numerical data is required</li>
+            <li>A password is at least a minimum number of characters</li>
+        </ul>
+        <p>Validation can occur on the client side using JavaScript, and on the server side. 
+            It is advisable to use both client-side and server-side validation. JavaScript should not be relied upon to validate any data before it’s saved to a database. 
+            This is because it’s possible for a user to modify the JavaScript code and bypass the validation rules. </p>
+        <h3>Disabling the Submit Button</h3>
+        <p>Another useful technique that can aid usability is to disable the submit button if there are errors on the form. If the submit button is disabled then no action is taken when it’s clicked. 
+            Most browsers will also display it in a lighter color to indicate that it cannot be clicked on. 
+            This prevents users from submitting a form containing any errors.</p>
+    </article>
     </article>
       <article>
         <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/12">Chapter 12</a></h5>
