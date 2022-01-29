@@ -166,6 +166,33 @@
            <h3>Mixins</h3>
            <p>A mixin is a way of adding properties and methods of some objects to another object without using inheritance. 
               It allows more complex objects to be created by ‘mixing’ basic objects together.</p>
+            <h4>Using Mixins to Create a copy() Function</h4>
+        <p>Another use of the mixin() function is to create a copy() method that can be used to make an exact, deep copy of an object</p>
+        <h3>Chaining Functions</h3>
+        <p>If a method returns this, its methods can be chained together to form a sequence of method calls that are called one after the other.</p>
+        <h3>Binding this</h3>
+        <p>We saw earlier that the value of this points to the object calling a method. 
+            It allows us to create generalized methods that refer to properties specific to a particular object. 
+            Be aware of a certain problem when a function is nested inside another function, which can often happen when using methods in objects, especially ones that accept callback functions. 
+            The problem is that the value of this loses its scope, and points to the global object inside a nested function</p>
+        <h4>Use that = this</h4>
+        <p>A common solution is to set the variable that to equal this before the nested function, and refer to that in the nested function instead of this. </p>
+        <h4>Use bind(this)</h4>
+        <p>The bind() method is a method for all functions and is used to set the value of this in the function. 
+           If this is provided as an argument to bind() while it’s still in scope, any reference to this inside the nested function will be bound to the object calling the original method.</p>
+        <h4>Use for-of Instead Of forEach()</h4>
+        <h4>Use Arrow Functions</h4>
+        <p>Arrow functions were introduced in ES6, and one of the advantages of using them is that they don't have their own this context, so this remains bound to the original object making the function call.</p>
+        <br>
+        <h3>Borrowing Methods from Prototypes</h3>
+        <p>It’s possible to borrow methods from objects without having to inherit all their properties and methods. 
+           This is done by making a reference to the function that you want to borrow (that is, without parentheses so that it isn’t invoked).</p>
+        <h4>Borrowing Array Methods</h4>
+        <p>One of the most common uses of borrowing methods was to borrow methods from arrays in ES5. 
+           There are many array-like objects in JavaScript, such as the arguments object that’s available in functions, and the node lists that many of the DOM methods return.</p>
+        <h3>Composition Over Inheritance</h3>
+        <p>There are a number of benefits to object-oriented programming, but there are also some problems that come with inheritance.</p>
+        <p>Composition over inheritance is a design pattern where objects are composed from 'building-block' objects, rather than inheriting all their properties and methods from a parent class.</p>
     </article>
       <article>
         <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/15">Chapter 15</a></h5>
