@@ -106,6 +106,66 @@
         <p>The static keyword can be used in class declarations to create a static method. 
            These are sometimes called class methods in other programming languages. 
            A static method is called by the class directly rather than by instances of the class.</p>
+           <h3>Prototypal Inheritance</h3>
+           <p>JavaScript uses a prototypal inheritance model. 
+              This means that every class has a prototype property that is shared by every instance of the class. 
+              So any properties or methods of a class’s prototype can be accessed by every object instantiated by that class.</p>
+           <h4>The Prototype Property</h4>
+           <p>When creating a class, you would normally add any default properties and methods to the class declaration. 
+               But what if you want to augment the class with extra methods and properties after it has been created? 
+               It turns out that you can still do this using the prototype property of the class. </p>
+           <h4>Finding Out the Prototype</h4>
+           <p>There are a number of ways to find the prototype of an object. 
+               One way is to go via the constructor function’s prototype property. 
+               Another way is to use the Object.getPrototypeOf() method</p>
+           <h3>Public and Private Methods</h3>
+           <p>By default, an object’s methods are public in JavaScript. 
+               Methods and properties are said to be public because they can be queried directly and changed by assignment. 
+               The dynamic nature of the language means that an object’s properties and methods can be changed after it has been created.</p>
+           <h3>Inheritance</h3>
+           <p>The examples we’ve seen so far have all demonstrated inheritance by inheriting properties and methods from the prototype. 
+              But the prototype is just another object, so it also has its own prototype, which in turn has its own prototype... and so on, creating a chain of inheritance.</p>
+           <h3>The Object Constructor</h3>
+           <p>When an object calls a method, the JavaScript engine will check to see if the object has that method. 
+              If it doesn’t, it will check if the object’s prototype has the method. If not, it will check whether the prototype’s prototype has it. 
+              This continues all the way up the prototype chain, until it reaches the prototype of the Object() constructor function, from which all objects in JavaScript inherit.</p>
+           <h4>Enumerable Properties</h4>
+           <p>Properties of objects in JavaScript are said to be enumerable or non-enumerable. 
+              If they aren't enumerable, this means they will not show up when a for-in loop is used to loop through an object’s properties and methods.</p>
+           <h4>Inheritance Using extends</h4>
+           <p>A class can inherit from another class using the extends keyword in a class declaration.</p>
+           <br>
+           <h3>Polymorphism</h3>
+           <p>The concept of polymorphism means that different objects can have the same method, but implement it in different ways. 
+              The Object.prototype object has a toString() method that is shared by all objects. This means every object created in JavaScript will have a toString() method. Polymorphism means that objects are able to override this method with a more specific implementation. 
+              So although every object has a toString() method, the way it’s implemented can vary between different objects.</p>
+           <h3>Adding Methods to Built-in Objects</h3>
+           <p>It is possible to add more methods to the prototype of JavaScript’s built-in objects — such as Number, String, and Array — to add more functionality. 
+              This practice is known as monkey-patching, but it’s mostly frowned upon in the JavaScript community, despite it being an incredibly powerful technique (The Ruby programming community, on the other hand, generally embrace monkey-patching, so it is quite common in Ruby code examples.) .</p>
+           <h3>Property Attributes and Descriptors</h3>
+           <p>We’ve already seen that all objects are collections of key-value paired properties. It turns out that each property has a number of attributes that provide information about the property. 
+               These attributes are stored in a property descriptor, which is an object that contains values of each attribute.</p>
+           <p>All object properties have the following attributes stored in a property descriptor:</p>
+           <ul>
+               <li>value ― This is the value of the property and is undefined by default</li>
+               <li>writable ― This boolean value shows whether a property can be changed or not, and is false by default</li>
+               <li>enumerable ― this boolean value shows whether a property will show up when the object is displayed in a for in loop, and is false by default</li>
+               <li>configurable ― this boolean value shows whether you can delete a property or change any of its attributes, and is false by default.</li>
+           </ul>
+           <h4>Getting and Setting Property Descriptors</h4>
+           <p>The Object() constructor function has a number of methods for getting and defining property descriptors. 
+               We can see these values using the Object.getOwnPropertyDescriptor() method.</p>
+           <h4>Getters and Setters</h4>
+           <p>An object property descriptor can have get() and set() methods instead of a value attribute. 
+              All objects must have one or the other, they can't have both. 
+              The get() and set() methods can be used to control how a property is set using assignment and the value that is returned when a property is queried.</p>
+           <h3>Creating Objects from Other Objects</h3>
+           <p>It’s possible to avoid using classes altogether, and create new objects based on another object that acts as a 'blueprint' or prototype instead.
+              The Object() constructor function has a method called create that can be used to create a new object that is an exact copy of the object that is provided as an argument. 
+              The object that is provided as the argument acts as the prototype for the new object.</p>
+           <h3>Mixins</h3>
+           <p>A mixin is a way of adding properties and methods of some objects to another object without using inheritance. 
+              It allows more complex objects to be created by ‘mixing’ basic objects together.</p>
     </article>
       <article>
         <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/15">Chapter 15</a></h5>
