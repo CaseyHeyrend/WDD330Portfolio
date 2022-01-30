@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 1 Team Assignment</title>
+  <script>
+    function writeOutput(value) {
+      const testDiv = document.querySelector("#testDiv");
+      testDiv.innerHTML = value;
+    }
+
+    function readTest() {
+      const number1 = document.querySelector("#number1");
+      const sum = calculateSum(Number.parseInt(number1.value));
+      writeOutput(sum);
+    }
+
+    const add = () => { // <-- This is the preferred type
+      const number1 = document.querySelector("#number1");
+      const number2 = document.querySelector("#number2");
+      writeOutput(Number.parseInt(number1.value) + Number.parseInt(number2.value));
+    }
+
+    const calculateSum = function(max) {
+      let sum = 0;
+      for (i = 1; i <= max; i++) {
+        sum += i;
+      }
+      return sum;
+    }
+  </script> 
+</head>
+<body>
+  <input type="text" name="number1" id="number1">
+  <input type="text" name="number2" id="number2">
+  <button type="submit" onclick="readTest()">Submit</button>
+  <button type="add" onclick="add()">Add</button>
+  <div id="testDiv"></div>  
+</body>
+</html>
