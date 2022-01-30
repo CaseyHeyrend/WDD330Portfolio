@@ -196,6 +196,163 @@
     </article>
       <article>
         <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/15">Chapter 15</a></h5>
-    </article>
+        <h2>Modern JavaScript Development</h2>
+        <h3>Libraries</h3>
+        <p>A JavaScript library is a piece of code that provides several methods that make it easier to achieve common tasks. 
+           JavaScript is an extremely flexible language that can accomplish most programming tasks – but not all undertakings are as easy to do as they should be. 
+           A library will abstract functionality into easier-to-use functions and methods. 
+           These can then be used to complete common tasks without having to use lots of repetitive code.</p>
+        <h4>DOM Manipulation Example</h4>
+        <p>A good example of how libraries can help save time is in DOM manipulation. 
+           The DOM API provides all the tools required to manipulate the DOM, but some can be verbose and take several lines of code to attain even the most basic of tasks.</p>
+        <h4>jQuery</h4>
+        <p>jQuery is the most popular of all the JavaScript libraries used today, as seen in these statistics on W3Techs and Built With.. 
+           It is used in a huge number of commercial websites and has a plugin system that makes it easy to extend and use to build common web page elements, such as a lightbox or carousel widget.</p>
+        <p>jQuery was released in 2006, originally as a DOM manipulation library. It has since grown much bigger, and now provides hundreds of methods for selecting nodes, as well as traversing the DOM, animation effects, Ajax and events. It also has its own testing library: <a href="https://qunitjs.com/">QUnit</a>.</p>
+        <h4>Underscore & Lodash</h4>
+        <p><a href="http://underscorejs.org/">Underscore</a> and <a href="https://lodash.com/">Lodash</a> are very similar libraries of functions that provide additional functionality to the language. 
+            They both provide a large number of utility functions under the namespace _ (this is where they get their name from as the _ character is often referred to as an 'underscore' or a 'lodash'). 
+            A number of JavaScript libraries list one of these as a core dependency.</p>
+        <h4>Finding Libraries</h4>
+        <p>It is certainly worth considering using a library to make some common tasks easier. 
+            There’s a large number of high-quality JavaScript libraries in <a href="https://en.wikipedia.org/wiki/List_of_JavaScript_libraries">this list on Wikipedia</a>, while <a href="http://microjs.com/#">MicroJS</a> is a high-quality repository of small JavaScript libraries that focus on specific tasks, and <a href="http://anguscroll.com/just/">Just</a> is a library of functions that just do one task without depending on any other functions or libraries.</p>
+        <h3>Modular JavaScript</h3>
+        <p>A module is a self-contained piece of code that provides functions and methods that can then be used in other files and by other modules. 
+            This helps to keep code organized in separate, reusable files, which improves code maintainability. 
+            The code in a module should have a single purpose, and group together functions with distinct functionality. </p>
+        <h4>ES6 Modules</h4>
+        <p>There are a few important points about modules that are worth keeping in mind:</p>
+        <ul>
+            <li>All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this.</li>
+            <li>A module has its own global scope, so any variables created in the top-level of a module can only be accessed within that module.</li>
+            <li>The value of this in the top level of a module is undefined, rather than the global object.</li>
+            <li>You can't use HTML-style comments in modules (although this isn't very common in any JavaScript program these days).</li>  
+        </ul>
+        <h4>Default Exports</h4>
+        <p>Default exports refer to a single variable, function or class in a module that can be imported without having to be explicitly named. 
+            The syntax for default exports is purposely easier to read because this is how modules were designed to be used.</p>
+        <h4>Node.js Modules</h4>
+        <p>Node.js had already implemented modules before they were introduced in ES6, and used a slightly different notation called Common JS modules. 
+            At the time of writing it is proving difficult to merge the two notations in an elegant way, although it is expected that Node.js will support ES6 modules in some way in the future. 
+            Despite this, I expect you will continue to see the Common JS module pattern used by Node.js tutorials for a long time to come.</p>
+        <br>
+        <h3>MVC Frameworks</h3>
+        <p>Model-View-Controller (MVC) is a design pattern that’s been used for a long time in server-side languages. 
+            It’s a common way of designing software, and used by server-side frameworks such as Ruby On Rails and Django. 
+            In recent years it has been used in JavaScript code to make it easier to organize large-scale web applications.</p>
+        <p>MVC separates an application into three distinct, independent components that interact with each other:</p>
+        <ul>
+            <li><strong>Models</strong> are objects that implement the functionality for creating, reading, updating and deleting (known as CRUD tasks) specific pieces of information about the application, as well as any other associated logic and behavior. 
+                In a to-do list application, for example, there would be a task model providing methods to access all the information about the tasks such as names, due dates and completed tasks. 
+                This data will often be stored in a database or some other container.</li>
+            <li><strong>Views</strong> provide a visual representation of the model showing all the relevant information. 
+                In a web application, this would be the HTML displayed on a web page. 
+                Views also provide a way for users to interact with an application, usually via forms. 
+                In a to-do list application, the views would display the tasks as an HTML list with checkboxes that a user could tick to say a task had been completed.</li>
+            <li><strong>Controllers</strong>link models and views together by communicating between them. 
+                They respond to events, which are usually inputs from a user (entering some data into a form, for example), process the information, then update the model and view accordingly.
+                In a to-do list application, the controller functions would respond to the event of a user clicking on a check box and then inform the model that a task had been completed. 
+                The model would then update the information about that task.</li>
+        </ul>
+        <br>
+        <h4>MV* Frameworks</h4>
+        <p>An MVC architecture can take a lot of code to implement, and many frameworks have emerged that take care of much of the setup code for you. 
+            One of the main features of MVC frameworks is data binding, which is the process of linking the model and view together. </p>
+        <p>The views are simply web pages written in HTML, although it is common to use templating languages so dynamic data can be inserted into the page (more about these in the section that follows):</p>
+        <ul>
+            <li><a href="http://aurelia.io/">Aurelia</a> is a modern framework that uses ES6, and focuses on letting you write dynamic web applications while keeping the implementation details in the background.</li>
+            <li><a href="https://angular.io/">Angular</a> is a powerful framework by Google to make creating dynamic web applications easier. This is done by extending the HTML language using custom ng- attributes.</li>
+            <li><a href="https://emberjs.com/">Ember</a> is a framework designed to make building large web applications easier. It does this by using common conventions that avoid the need for lots of set-up code, though it can become more difficult if you don’t follow these conventions.</li>
+        </ul>
+        <br>
+        <h3>Templates</h3>
+        <p>Templating languages allow HTML to be separated from the JavaScript program, making maintenance easier because they’re no longer tightly coupled. 
+            The templates are often stored in separate files or inside their own script tags, so they can be reused and quickly edited in one place if changes need to be made. 
+            It also means that inserting large strings of HTML into a document (which can have adverse effects on performance) is avoided.</p>
+        <p>There are a number of popular templating languages to choose from, a selection of some of the most popular are shown in the list below:</p>
+        <ul>
+            <li><a href="https://handlebarsjs.com/">Handlebars</a></li>
+            <li><a href="https://github.com/pugjs/pug">Pug</a></li>
+            <li><a href="http://www.embeddedjs.com/">EJS</a></li>
+            <li><a href="https://github.com/janl/mustache.js">Mustache</a></li>
+            <li><a href="http://mozilla.github.io/nunjucks/">Nunjucks</a></li>
+        </ul>
+        <br>
+        <h4>Web Components</h4>
+        <p>The W3C are working on developing a standard called <a href="https://www.webcomponents.org/introduction">Web Components</a> that attempts to extend HTML and introduce new features such as templates, custom tags, the ability to import HTML partials, and a shadow DOM.</p>
+        <h4>View Libraries</h4>
+        <p><a href="https://reactjs.org/">React</a> is developed by Facebook and it has been hugely successful; quickly becoming one of the most popular JavaScript libraries that’s used by a large number of popular websites such as the BBC, PayPal and Netflix. 
+            <a href="https://vuejs.org/">Vue.js</a> was developed by Evan You after he worked on AngularJS at Google. 
+            His idea was to design a lightweight view library that built on all the good things about AngularJS.</p>
+        <p>Some popular alternatives are:</p>
+        <ul>
+            <li><a href="https://svelte.dev/">Svelte</a></li>
+            <li><a href="https://www.infernojs.org/">Inferno</a></li>
+            <li><a href="https://github.com/anthonyshort/deku">Deku</a></li>
+            <li><a href="http://developit.github.io/preact/">Preact</a></li>
+            <li><a href="https://github.com/Matt-Esch/virtual-dom">Virtual-DOM</a></li>
+            <li><a href="http://moonjs.ga/">Moon</a></li> 
+        </ul>
+        <br>
+        <h3>Package Managers</h3>
+        <p>As modules have become more widely used in JavaScript, there’s been a need for tools to manage them. 
+            Package managers allow developers to download modules from a central repository. 
+            A package is just a directory with one or more files of code, as well as a package.json file that contains information about the code in the package.</p>
+        <h4>npm</h4>
+        <p>The Node Package Manager was developed soon after Node.js was introduced to allow JavaScript code to be shared by developers. 
+            It has since grown into the largest repository of code libraries available.
+            npm allows you to install JavaScript packages onto your machine. 
+            Some packages rely on other packages, so npm acts as a dependency manager. 
+            For example, if you use npm to install a package, it will also install all the packages that the original package depends on as well.</p>
+        <h4>Searching for Packages</h4>
+        <p>The npm repository is huge – it contains almost half a million different packages, ranging from popular libraries, such as jQuery and Lodash, to tiny modules that are literally a single line of code.</p>
+        <h4>npm init</h4>
+        <p>The npm init command is used when you start a project. It walks you through creating a package.json file. 
+            This is a file that contains information about a JavaScript project in JSON format. This includes meta-information, such as the name and version number. 
+            It also includes information about any dependencies the project has, and can be used to specify how tests will be run.</p>
+        <h3>Deploying JavaScript</h3>
+        <p>When it comes to deploying your JavaScript program, it’s time to think about optimizing the code. 
+                If you’ve used multiple external libraries and lots of modules, you might have a large number of files that need to be included in your HTML file. One way of doing this is to simply include a different script tag for each JavaScript file. 
+                However, this is not optimal for a number of reasons:</p>
+        <ul>
+            <li>The scripts must be included in the correct order.</li>
+            <li>Each file represents a separate request to the server.</li>
+            <li>The files will be large.</li>
+        </ul>
+        <br>
+        <h4>Transpiling Code</h4>
+        <p>Code transpilers take JavaScript code and turn it into JavaScript code! 
+            That might sound strange but it’s all to do with the fact that browsers struggle to keep up with the fast-moving pace of ECMAScript versions. </p>
+        <p><a href="https://babeljs.io/">Babel</a> is the most popular transpiler for converting the most up-to-date version of ECMAScript into an older flavor of JavaScript.</p>
+        <p>There are also a number of transpilers that allow you to write in a different language then compile it into JavaScript. 
+            This is useful if you prefer using an alternative coding style – for example, CoffeeScript, which has many similarities to the Ruby language. 
+            Some more examples are listed below:</p>
+        <ul>
+            <li><a href="http://coffeescript.org/">CoffeeScript</a> (There's a <a href="https://www.sitepoint.com/premium/books/jump-start-coffeescript">good book about this</a>).</li>
+            <li><a href="">TypeScript</a></li>
+            <li><a href="">Dart</a></li>
+        </ul>
+        <br>
+        <h4>Minification</h4>
+        <p>Minification is the process of removing any unnecessary characters from your code to reduce the file size. 
+            This includes all comments, whitespace, and other characters that are superfluous.
+           Tools are available to do this, known as minifiers. Some popular choices include:</p>
+        <ul>
+            <li><a href="https://www.npmjs.com/package/yui">YUI Compressor</a></li>
+            <li><a href="https://developers.google.com/closure/compiler/">Google’s Closure</a></li>
+            <li><a href="https://github.com/mishoo/UglifyJS">UglifyJS</a></li>
+        </ul>
+        <br>
+        <h4>Webpack</h4>
+        <p>Webpack is a module bundler that takes all the JavaScript files used in your project and bundles them altogether in one file.
+           Webpack also uses the concept of 'loaders', which allows you to perform tasks such as:</p>
+        <ul>
+            <li>Transpiling code</li>
+            <li>Minifying code</li>
+            <li>Linting code</li>
+            <li>Testing code</li>
+            <li>Compiling CSS preprocessor files (such as Sass, Less or Stylus) into standard CSS files.</li>
+        </ul>
+      </article>
 </body>
 </html>
