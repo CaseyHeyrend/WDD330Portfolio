@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 04 Team Activity</title>
+
+  <script type="module" src="/modules/tic_tac_toe.mjs"></script>
+
+  <script type="module">
+    import { TicTacToe } from '/modules/tic_tac_toe.mjs';
+
+    const game = new TicTacToe('.game-board .cell', '.reset-game');
+  </script>
+
+  <style>
+    .container {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .game-board {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 auto;
+    }
+
+    .game-row {
+      display: flex;
+      flex-direction: row;
+
+      border-bottom: 2px solid black;
+    }
+
+    .game-row:last-child {
+      border-bottom: none;
+    }
+
+    .cell {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-right: 2px solid black;
+    }
+
+    .cell:last-child {
+      border-right: none;
+    }
+
+    .game-piece {
+      font-size: 4rem;
+    }
+
+    .reset-game {
+      position: relative;
+      top: -25px;
+      width: 150px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="game-board">
+      <button class="reset-game">Click to Reset</button>
+      <div class="game-row">
+        <div class="cell"><span class="game-piece"></span></div>
+        <div class="cell"><span class="game-piece"></span></div>
+        <div class="cell"><span class="game-piece"></span></div>
+      </div>
+
+      <div class="game-row">
+        <div class="cell"><span class="game-piece"></span></div>
+        <div class="cell"><span class="game-piece"></span></div>
+        <div class="cell"><span class="game-piece"></span></div>
+      </div>
+
+      <div class="game-row">
+        <div class="cell"><span class="game-piece"></span></div>
+        <div class="cell"><span class="game-piece"></span></div>
+        <div class="cell"><span class="game-piece"></span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
