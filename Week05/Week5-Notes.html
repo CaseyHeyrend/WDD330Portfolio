@@ -9,18 +9,120 @@
 <body>
     <h1>JavaScript: Novice to Ninja, 2nd Edition</h1>
     <article>
-     <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/10">Chapter 10</a></h5>  
-     <h2>Testing and Debugging</h2>
-     <p>Errors and bugs are a fact of life in programming ― they will always be there. 
-         A ninja programmer will try to do everything to minimize errors occurring, and find ways to identify and deal with them quickly</p>
-     <h3>Errors, Exceptions, and Warnings</h3>
-     <p>Errors are caused when something goes wrong in a program. They are usually caused by one of the following:</p>
-     <ul>
-         <li>System error ― there’s a problem with the system or external devices with which the program is interacting.</li>
-         <li>Programmer error ― the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.</li>
-         <li>User error ― the user has entered data incorrectly, which the program is unable to handle.</li>
-     </ul>
-     
-    </article>
+        <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/10">Chapter 10</a></h5>
+        <h2>Testing and Debugging</h2>
+        <p>Errors and bugs are a fact of life in programming ― they will always be there. 
+            A ninja programmer will try to do everything to minimize errors occurring, and find ways to identify and deal with them quickly</p>
+        <h3>Errors, Exceptions, and Warnings</h3>
+        <p>Errors are caused when something goes wrong in a program. They are usually caused by one of the following:</p>
+        <ul>
+            <li>System error ― there’s a problem with the system or external devices with which the program is interacting.</li>
+            <li>Programmer error ― the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.</li>
+            <li>User error ― the user has entered data incorrectly, which the program is unable to handle.</li>
+        </ul>
+        <h4>Exceptions</h4>
+        <p>An exception is an error that produces a return value that can then be used by the program to deal with the error.</p>
+        <h4>Stack Traces</h4>
+        <p>An exception will also produce a stack trace. This is a sequence of functions or method calls that lead to the point where the error occurred. 
+           It’s often not just a single function or method call that causes an error.</p>
+        <h4>Warnings</h4>
+        <p>A warning can occur if there’s an error in the code that isn't enough to cause the program to crash. This means the program will continue to run after a warning. 
+           This might sound good, but it can be problematic, since the issue that produced the warning may cause the program to continue running incorrectly.</p>
+        <h3>The Importance of Testing and Debugging</h3>
+        <p>JavaScript is a fairly forgiving language when it comes to errors; it didn’t implement exceptions at all until ECMAScript version 3. 
+            Instead of alerting a user to an error in a program, it just failed silently in the background, and this is sometimes still the case. 
+            It might seem like a good idea at first, but the error might give unexpected or incorrect results that nobody spots, or lurk in the background for a long time before causing the program to crash spectacularly. 
+            Failing silently makes errors difficult to spot and longer to track down.</p>
+        <h3>Strict Mode</h3>
+        <p>ECMAScript 5 introduced a strict mode that produces more exceptions and warnings and prohibits the use of some deprecated features. 
+           This is due to the fact that strict mode considers coding practices that were previously accepted as just being 'poor style' as actual errors.</p>
+        <h4>Linting Tools</h4>
+        <p>Linting tools such as <a href="https://www.jslint.com/">JS Lint</a>,<a href="https://jshint.com/">JS Hint</a>, and <a href="https://eslint.org/">ES Lint</a> can be used to test the quality of JavaScript code, beyond simply using strict mode. 
+           They are designed to highlight any sloppy programming practices or syntax errors, and will complain if certain style conventions are not followed, such as how code is indented.</p>
+        <h3>Feature Detection</h3>
+        <p>Programming in JavaScript can be something of a moving target as the APIs it uses are in a constant state of flux. 
+           And there are new APIs being developed as part of the HTML5 specification all the time (more on these in chapter 14). 
+           Browser vendors are constantly adding support for these new features, but they don’t always keep up. 
+           What’s more, some browsers will support certain features and others won’t. 
+           You can’t always rely on users having the most up-to-date browser, either.</p>
+        <h3>Debugging in the Browser</h3>
+        <p>Debugging is the process of finding out where bugs occur in the code and then dealing with them. 
+            In many cases, the point at which an error occurs is not always where it originated, so you’ll need to run through the program to see what’s happening at different stages of its execution. 
+            When doing this, it can be useful to create what are known as breakpoints, which halt the progress of the code and allow us to view the value of different variables at that point in the program. 
+            There are a number of options for debugging JavaScript code in the browser.</p>
+        <h4>The Trusty Alert</h4>
+        <p>The most basic form of debugging is to use the alert() method to show a dialog at certain points in the code. 
+           Because alert() stops a program from running until OK is clicked, it allows us to effectively put breakpoints in the code that let us check the value of variables at that point to see if they’re what we expect them to be.</p>
+        <h4>Using the Console</h4>
+        <p>Most modern JavaScript environments have a console object that provides a number of methods for logging information and debugging. It's not officially part of the ECMAScript specification, but is well supported in all the major browsers and Node.js.</p>
+        <p>console.log()</p>
+        <p>The console.trace() method will log an interactive stack trace in the console. This will show the functions that were called in the lead up to an exception occurring while the code is running.</p>
+        <h4>Debugging Tools</h4>
+        <p>Most modern browsers also have a debugging tool that allows you to set breakpoints in your code that will pause it at certain points. You can then see the values of all the variables at those points and modify them. 
+            This can be very useful when trying to track down bugs. 
+            Here are the links to the debugger documentation for each of the major browsers:</p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Debugger">Firefox</a></li>
+            <li><a href="https://docs.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/">Edge</a></li>
+            <li><a href="https://developer.chrome.com/docs/devtools/">Chrome</a></li>
+            <li><a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Debugger/Debugger.html">Safari</a></li>  
+        </ul>
+        <br>
+        <h3>Error Objects</h3>
+        <p>An error object can be created by the host environment when an exception occurs, or it can be created in the code using a constructor function.</p>
+        <p>There are seven more error objects used for specific errors:</p>
+        <ul>
+            <li><strong>EvalError</strong> is not used in the current ECMAScript specification and only retained for backwards compatibility. It was used to identify errors when using the global eval() function.</li>
+            <li><strong>RangeError</strong> is thrown when a number is outside an allowable range of values.</li>
+           <li><strong>ReferenceError</strong> is thrown when a reference is made to an item that doesn’t exist. 
+                       For example, calling a function that hasn't been defined.</li>
+           <li><strong>SyntaxError</strong> is thrown when there’s an error in the code’s syntax.</li>
+           <li><strong>TypeError</strong> is thrown when there’s an error in the type of value used; for example, a string is used when a number is expected.</li>
+           <li><strong>URIError</strong>is thrown when there’s a problem encoding or decoding the URI.</li>
+           <li><strong>InternalError</strong> is a non-standard error that is thrown when an error occurs in the JavaScript engine. 
+                       A common cause of this too much recursion.</li>
+        </ul>
+        <br>
+        <p>All error objects have a number of properties, but they’re often used inconsistently across browsers. The only properties that are generally safe to use are:</p>
+        <ul>
+            <li>The <strong>name</strong> property returns the name of the error constructor function used as a string, such as 'Error' or 'ReferenceError'.</li>
+            <li>The <strong>message</strong> property returns a description of the error and should be provided as an argument to the Error constructor function.</li>
+            <li>The <strong>stack</strong> property will return a stack trace for that error. This is a non-standard property and it’s recommended that it is not safe to use in production sites.</li>
+        </ul>
+        <br>
+        <h4>Throwing Exceptions</h4>
+        <p>So far we’ve seen errors that are thrown automatically by the JavaScript engine when an error occurs. It’s also possible to throw your own exceptions using the throw statement. 
+           This will allow for any problems in your code to be highlighted and dealt with, rather than lurk quietly in the background.</p>
+        <h3>Exception Handling</h3>
+        <p>When an exception occurs, the program terminates with an error message. 
+            This is ideal in development as it allows us to identify and fix errors. In production, however, it will appear as if the program has crashed, which does not reflect well on a ninja programmer.</p>
+        <h4>try, catch, and finally</h4>
+        <p>If we suspect a piece of code will result in an exception, we can wrap it in a try block. 
+           This will run the code inside the block as normal, but if an exception occurs it will pass the error object that is thrown onto a catch block.</p>
+        <p>The code inside the catch block will only run if an exception is thrown inside the try block. The error object is automatically passed as a parameter to the catch block. </p>
+        <p>A finally block can be added after a catch block. This will always be executed after the try or catch block, regardless of whether an exception occurred or not. It is useful if you want some code to run in both cases.</p>
+        <h3>Tests</h3>
+        <p>Testing is an important part of programming that can often be overlooked. 
+           Writing good tests means your code will be less brittle as it develops, and any errors will be identified early on.</p>
+        <h4>Test-driven Development</h4>
+        <p>Test-driven development (TDD) is the process of writing tests before any actual code. 
+            Obviously these tests will initially fail, because there is no code to test. The next step is to write some code to make the tests pass. 
+            After this, the code is refactored to make it faster, more readable, and remove any repetition. 
+            The code is continually tested at each stage to make sure it continues to work. 
+            This process should be followed in small piecemeal chunks every time a new feature is implemented, resulting in the following workflow:</p>
+        <ol>
+            <li>Write tests (that initially fail)</li>
+            <li>Write code to pass the tests</li>
+            <li>Refactor the code</li>
+            <li>Test refactored code</li>
+            <li>Write more tests for new features</li>  
+        </ol>
+        <br>
+        <h4>Testing Frameworks</h4>
+        <p>It is possible to write your own tests, as we saw earlier with the itSquareRoots4() test function, but this can be a laborious process. 
+            Testing frameworks provide a structure to write meaningful tests and then run them.</p>
+        <h4>Jest</h4>
+        <p><a href="https://jestjs.io/">Jest</a> is a TDD framework, created by Facebook, that has gained a lot of popularity recently. It makes it easy to create and run tests by providing helper methods for common test assertions.</p>
+       </article>
     </body>
 </html>
