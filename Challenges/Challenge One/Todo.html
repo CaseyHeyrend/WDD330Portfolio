@@ -12,8 +12,27 @@
     <h1>My ToDos List</h1>
     <br>
     </header>
-    <div class="container" onmousemove="countToDo();">
-      
-    </div>  
+    <div class='container' onmousemove="countToDo();">
+      <div id='myDIV' class='header'>
+          <h2>My To Do List</h2>
+          <div id='inputContainer'><input type='text' id='myInput' placeholder='Todo item...'>
+              <div id='addItem' onclick='newItem()' class='addBtn'>ADD +</div>
+          </div>
+          <p id='warning'>You must write something to add to the list!</p>
+      </div>
+      <ul id='myUL'>
+        <li>Work out</li>
+        <li>Pay bills</li>
+        <li>Call mom</li>
+    </ul>
+    <!-- tasks left, sort by complete, option to show all -->
+    <div id='bottomRow'>
+        <button id='count'></button>
+        <button onclick='tasksLeft();'>Tasks left</button>
+        <button onclick='showComplete();'>Completed</button>
+        <button onclick="showAll();">Show All</button>
+    </div>
+    <p id="display"></p>
+</div>
     </body>
 </html>
