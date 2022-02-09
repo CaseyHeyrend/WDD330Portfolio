@@ -1,7 +1,6 @@
 body {
     background-color: #FFDAB9;
 }
-#F5F5F5
 .container {
     background-color: #F5F5F5;
     width: 40%;
@@ -29,7 +28,7 @@ h2 {
     font-weight: 800;
     margin: auto;
     /* font-family: cursive; */
-    background-color: rgb(123, 126, 89);
+    background-color: #98FB98;
    
 }
 
@@ -41,7 +40,7 @@ h2 {
     text-align: center;
     font-size: large;
     font-weight: 800;
-    background-color: rgb(123, 126, 89);
+    background-color: #98FB98;
 }
 
 ul {
@@ -66,7 +65,7 @@ p {
     display: none;
     font-style: italic;
     font-size: large;
-    color: rgb(211, 105, 57);
+    color: #DC143C;
 }
 
 #inputContainer {
