@@ -14,7 +14,7 @@ body{
     display: flex;
     flex-direction: row;
     margin: auto;
-    width: 60%;
+    width: 70%;
     flex-wrap: wrap;
     justify-content: space-around;
     background-color:#4682B4;/*SteelBlue*/
@@ -24,9 +24,9 @@ body{
     background-color: #F5F5F5;/*WhiteSmoke*/
     margin: 10px;
     padding: 10px;
-    font-size: 20px;
-    border-radius: 10px;
-    width: 25%;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 15%;
     box-shadow: 5px 5px 5px;
 
   }
