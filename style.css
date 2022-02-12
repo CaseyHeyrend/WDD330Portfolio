@@ -14,6 +14,7 @@ body{
     display: flex;
     flex-direction: row;
     margin: auto;
+    justify-content: center;
     width: 70%;
     flex-wrap: wrap;
     background-color:#4682B4;/*SteelBlue*/
@@ -29,10 +30,7 @@ body{
     box-shadow: 5px 5px 5px;
 
   }
-#blocks{
-  justify-content: center;
-}
-  h2{
+  #blocks{
     color:	#000000;/*Black*/
     display: flex;
     align-items: center;
