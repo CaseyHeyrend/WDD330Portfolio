@@ -33,7 +33,8 @@ body{
 
   h2{
     color:	#000000;/*Black*/
-    text-align: left;
+    display: flex;
+    align-items: center;
   }
   li{
     color:	#000000;/*Black*/
