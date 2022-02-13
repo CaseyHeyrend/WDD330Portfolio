@@ -1,3 +1,4 @@
+@import url(https://fonts.google.com/specimen/Indie+Flower?category=Handwriting);
 body {
     background-color: #B0E0E6;/*PowderBlue*/
 }
@@ -91,7 +92,7 @@ ul li.checked {
 } */
 
 .close:hover {
-    background: #800000;/*Maroon*/
+    background: #98FB98;/*PaleGreen*/
 }
 
 #bottomRow {
@@ -103,7 +104,7 @@ ul li.checked {
 
 #count {
     font-size: small;
-    color: rgb(160, 140, 140);/*WhiteSmoke*/
+    color:#800000 ;/*Maroon*/
     width: 25%;
     background-color: #F8F8FF;/*GhostWhite*/
     border-radius: 10px;
@@ -115,8 +116,8 @@ button {
     border-radius: 10px;
 }
 
-header {
-    font-family: cursive;
+header{
+    font-family: Handwriting;
     font-size: x-large;
     text-align: center;
 }
