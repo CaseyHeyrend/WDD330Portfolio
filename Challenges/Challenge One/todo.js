@@ -1,4 +1,4 @@
-// Create a close button and append it to each list item
+// Create a close button and append it to each list item 
 let mylist = document.getElementsByTagName('LI');
 for (let i = 0; i < mylist.length; i++) {
   let div = document.createElement('DIV');
@@ -19,7 +19,6 @@ for (let i = 0; i < close.length; i++) {
 
 // click on li to cross out list item
 let cross = document.getElementsByClassName('checked');
-
 for (let i = 0; i < cross.length; i++) {
   cross[i].onclick = function () {
     let div = this.parentElement;
@@ -85,7 +84,7 @@ function tasksLeft() {
     }
   });
 }
-
+//This is not Working 
 function showAll() {
   let savedList = JSON.parse(localStorage.getItem(myTodoList));
   savedList.forEach((item) => {
@@ -93,7 +92,7 @@ function showAll() {
 
   });
 }
-
+//This is not Working 
 function showComplete() {
   let completed = localStorage.getItem(myTodoList);
   // let completedItems = completed.filter(i => i.id == 'complete');
@@ -124,7 +123,7 @@ function countToDo() {
 // }
 
 const myTodoList = 'myList';
-
+//I dont know if this working right.
 function saveList(todo) {
   if (!localStorage.getItem(myTodoList)) {
     let storage = [];
@@ -136,9 +135,3 @@ function saveList(todo) {
     console.log(storage);
   }
 }
-
-
-
-// trying to add a checkbox 
-// let box = document.createTextNode('u25a2');
-// let check = document.createTextNode('✔');
