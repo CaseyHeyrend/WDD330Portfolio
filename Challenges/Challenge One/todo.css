@@ -1,4 +1,7 @@
-@import url(https://fonts.google.com/specimen/Indie+Flower?category=Handwriting);
+@font-face{
+    font-family: Indie Flower;
+    src: url('https://fonts.google.com/specimen/Indie+Flower?category=Handwriting')
+}
 body {
     background-color: #B0E0E6;/*PowderBlue*/
 }
@@ -117,7 +120,7 @@ button {
 }
 
 header{
-    font-family: Handwriting;
+    font-family: Indie Flower;
     font-size: x-large;
     text-align: center;
 }
