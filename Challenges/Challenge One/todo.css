@@ -1,122 +1,57 @@
 body {
     background-color: #B0E0E6;/*PowderBlue*/
 }
-.container {
-    background-color: #F5F5F5;/*WhiteSmoke*/
-    width: 50%;
-    margin: auto;
-    padding: 5%;
-    border-radius: 15px;
-}
-
-input {
-    background-color: #FAEBD7;/*AntiqueWhite*/
-    line-height: 25px;
-    border-radius: 7px;
-}
-
-h2 {
-    margin: 5px;
-}
-
-.addBtn {
-    border: black solid 1px;
-    border-radius: 5px;
-    width: 17%;
-    text-align: center;
-    font-size: larger;
-    font-weight: 800;
-    margin: auto;
-    /* font-family: cursive; */
-    background-color: #98FB98;
-   
-}
-
-.close {
-    border: black solid 1px;
-    font-family: cursive;
-    border-radius: 5px;
-    width: 7%;
-    text-align: center;
-    font-size: large;
-    font-weight: 800;
-    background-color: #98FB98;/*SpringGreen*/
-}
-
-ul {
-    list-style: none;
-}
-
-li {
-    display: flex;
-    justify-content: space-between;
-    line-height: 25px;
-    font-size: large;
-    font-weight: 500;
-    cursor: pointer;
-
- 
-}
-li :hover {
-    background: #FFEFD5;/*PapayaWhip*/
-}
-
-p {
-    display: none;
-    font-style: italic;
-    font-size: large;
-    color: #DC143C;/*Crimson*/
-}
-
-#inputContainer {
-    display: flex;
-    flex-direction: row;
-}
-
-ul li.checked {
-    text-decoration: line-through;
-}
-
-/* ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #B22222; FireBrick
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-} */
-
-.close:hover {
-    background: #98FB98;/*PaleGreen*/
-}
-
-#bottomRow {
-    display: flex;
-    flex-direction: row;
-    height: 50px;
-    flex-wrap: wrap;
-}
-
-#count {
-    font-size: small;
-    color:#800000 ;/*Maroon*/
-    width: 25%;
-    background-color: #F8F8FF;/*GhostWhite*/
-    border-radius: 10px;
-    border-style: none;
-}
-
-button {
-    width: 25%;
-    border-radius: 10px;
-}
-
 header{
     font-family:monospace;
     font-size: x-large;
-    text-align: center;
+    text-align: center;  
+}
+.title {
+  margin: 1rem 0;
+  color: #000000
+}
+
+.todolist {
+  padding-left: 0;
+
+  .todoitem {
+    position: relative;
+    margin-bottom: 0.25rem;
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+    border-top: 1px solid #ccc;
+    
+    &.done {
+      .form-check-label {
+        color: #999;
+      text-decoration: line-through;
+      }
+    }
+
+    &.highlight {
+      border-color: #ff2968;
+      background-color: #ff8fb0;
+      
+      &:last-child {
+        border-color: #ff2968;
+      }
+    }
+    
+    &:last-child {
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .btn-danger {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+    
+    .form-check-label {
+      width: 100%;
+
+      .form-check-input {
+        margin-right: 1rem;
+      }
+    }
+  }
 }
