@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Challenge Todo List App</title>
-    <link rel="stylesheet" href="todo.css" />
-    <script src='todo.js' defer></script>
+    <link rel="stylesheet" href="Just in Case.css" />
+    <script src='Just in case.js' defer></script>
   </head>
   <body>
     <header>
@@ -13,8 +13,28 @@
     <h5><a href="https://caseyheyrend.github.io/WDD330Portfolio/">Back to Index</a></h5>
     <br>
     </header>
-<div class="container-fluid">
-  <div id="app"></div>
+    <div class='container' onmousemove="countToDo();">
+      <div id='myDIV' class='header'>
+          <h2>My To Do List</h2>
+          <div id='inputContainer'><input type='text' id='myInput' placeholder='Todo item...'>
+              <div id='addItem' onclick='newItem()' class='addBtn'>ADD +</div>
+          </div>
+          <p id='warning'>You must write something to add to the list!</p>
+      </div>
+      <ul id='myUL'>
+        <li>Work out</li>
+        <li>Do Homework</li>
+        <li>Do some Code</li>
+        <li>Play Animal Crossing New Horizon</li>
+    </ul>
+    <!-- tasks left, sort by complete, option to show all -->
+    <div id='bottomRow'>
+        <button id='count'></button>
+        <button onclick='tasksLeft();'>Tasks left</button>
+        <button onclick='showComplete();'>Completed</button>
+        <button onclick="showAll();">Show All</button>
+    </div>
+    <p id="display"></p>
 </div>
-  </body>
+    </body>
 </html>

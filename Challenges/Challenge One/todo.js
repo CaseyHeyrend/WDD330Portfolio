@@ -1,128 +1,137 @@
-class TodoApp extends React.Component {
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      items: [],
-      text: ""
-    };
-    
-    this.handleTextChange = this.handleTextChange.bind(this);
-    this.handleAddItem = this.handleAddItem.bind(this);
-    this.markItemCompleted = this.markItemCompleted.bind(this);
-    this.handleDeleteItem = this.handleDeleteItem.bind(this);
-  }
-  handleTextChange(event) {
-    this.setState({
-      text: event.target.value
-    });
-  }
-  handleAddItem(event) {
-    event.preventDefault();
-    
-    var newItem = {
-      id: Date.now(),
-      text: this.state.text,
-      done: false
-    };
-    
-    this.setState((prevState) => ({
-      items: prevState.items.concat(newItem),
-      text: ""
-    }));
-  }
-  markItemCompleted(itemId) {
-    var updatedItems = this.state.items.map(item => {
-      if (itemId === item.id)
-        item.done = !item.done;
-      
-      return item;
-    });
-    
-    // State Updates are Merged
-    this.setState({
-      items: [].concat(updatedItems)
-    });
-  }
-  handleDeleteItem(itemId) {
-    var updatedItems = this.state.items.filter(item => {
-      return item.id !== itemId;
-    });
-    
-    this.setState({
-      items: [].concat(updatedItems)
-    });
-  }
-  render() {
-    return (
-      <div>
-        <h3 className="title">My To Do List</h3>
-        <div className="row">
-          <div className="col-md-3">
-            <TodoList items={this.state.items} onItemCompleted={this.markItemCompleted} onDeleteItem={this.handleDeleteItem} />
-          </div>
-        </div>
-        <form className="row">
-          <div className="col-md-3">
-            <input type="text" className="form-control" onChange={this.handleTextChange} value={this.state.text} />
-          </div>
-          <div className="col-md-3">
-            <button className="btn btn-primary" onClick={this.handleAddItem} disabled={!this.state.text}>{"Add " + (this.state.items.length + 1)}</button>
-          </div>
-        </form>
-      </div>
-    );
+// Create a close button and append it to each list item 
+let mylist = document.getElementsByTagName('LI');
+for (let i = 0; i < mylist.length; i++) {
+  let div = document.createElement('DIV');
+  let txt = document.createTextNode('X');
+  div.className = 'close';
+  div.appendChild(txt);
+  mylist[i].appendChild(div);
+}
+
+// Click on a close button to hide the current list item
+let close = document.getElementsByClassName('close');
+for (let i = 0; i < close.length; i++) {
+  close[i].onclick = function () {
+    let div = this.parentElement;
+    div.style.display = 'none';
   }
 }
 
-class TodoItem extends React.Component {
-  constructor(props) {
-    super(props);
-    this.markCompleted = this.markCompleted.bind(this);
-    this.deleteItem = this.deleteItem.bind(this);
+// click on li to cross out list item
+let cross = document.getElementsByClassName('checked');
+for (let i = 0; i < cross.length; i++) {
+  cross[i].onclick = function () {
+    let div = this.parentElement;
+    div.style.textDecoration = 'line-through';
+    // div.id = 'complete';
   }
-  markCompleted(event) {
-    this.props.onItemCompleted(this.props.id);
-  }
-  deleteItem(event) {
-    this.props.onDeleteItem(this.props.id);
-  }
-  // Highlight newly added item for several seconds.
-  componentDidMount() {
-    if (this._listItem) {
-      // 1. Add highlight class.
-      this._listItem.classList.add("highlight");
+}
 
-      // 2. Set timeout.
-      setTimeout((listItem) => {
-        // 3. Remove highlight class.
-        listItem.classList.remove("highlight");
-      }, 500, this._listItem);
+// Toggles to a 'checked' class when clicking on a list item
+let list = document.querySelector('ul');
+list.addEventListener('click', function (event) {
+  if (event.target.tagName == 'LI') {
+    event.target.classList.toggle('checked');
+    event.target.id = 'complete';
+  }
+}, false);
+
+
+// Create a new list item when clicking on the 'Add' button
+function newItem() {
+  let itemArray = document.getElementsByTagName('li');
+  let li = document.createElement('LI');
+  let inputValue = document.getElementById('myInput').value;
+  //  itemArray.push(inputValue);
+  console.log(itemArray);
+  let t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') { // if no text added display warning
+    document.getElementById('warning').style.display = 'block';
+  } else { // add to list li and remove warning
+    document.getElementById('myUL').appendChild(li);
+    document.getElementById('warning').style.display = 'none';
+    // here may be good to save to local storage
+    saveList(inputValue);
+
+  }
+
+  // clear the text field when done 
+  document.getElementById('myInput').value = '';
+
+  // create div for the x to clear the item from the list (append the text 'X') add to li above
+  let div = document.createElement('DIV');
+  let txt = document.createTextNode('X');
+  div.className = 'close';
+  div.appendChild(txt);
+  li.appendChild(div);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function () {
+      let div = this.parentElement;
+      div.parentElement.removeChild(div);
+      // div.style.display = 'none'; // hides versus removes
     }
   }
-  render() {
-    var itemClass = "form-check todoitem " + (this.props.completed ? "done" : "undone");
-    return (
-      <li className={itemClass} ref={li => this._listItem = li }>
-        <label className="form-check-label">
-          <input type="checkbox" className="form-check-input" onChange={this.markCompleted} /> {this.props.text}
-        </label>
-        <button type="button" className="btn btn-danger btn-sm" onClick={this.deleteItem}>x</button>
-      </li>
-    );
-  }
+}
+// if checked and crossed out will remove the item from the list
+function tasksLeft() {
+  let done = document.querySelectorAll('li');
+  done.forEach((item) => {
+    if (item.classList == 'checked') {
+      console.log(item);
+      item.parentElement.removeChild(item); // 
+    }
+  });
+}
+//This is not Working 
+function showAll() {
+  let savedList = JSON.parse(localStorage.getItem(myTodoList));
+  savedList.forEach((item) => {
+    item = document.getElementById('display').innerHTML;
+
+  });
+}
+//This is not Working 
+function showComplete() {
+  let completed = localStorage.getItem(myTodoList);
+  // let completedItems = completed.filter(i => i.id == 'complete');
+  // console.log(completedItems);
 }
 
-class TodoList extends React.Component {
-  render() {
-    return (
-      <ul className="todolist">
-        {this.props.items.map(item => (
-          <TodoItem key={item.id} id={item.id} text={item.text} completed={item.done} onItemCompleted={this.props.onItemCompleted} onDeleteItem={this.props.onDeleteItem} />
-        ))}
-      </ul>
-    );
-  }
+// to display how many items are on the list (doesn't update unless new add)
+function countToDo() {
+  let count = document.querySelectorAll('li');
+  let total = count.length;
+  console.log(total); // shows in browser
+  document.getElementById('count').innerHTML = 'You have ' + total + ' tasks left.';
 }
 
-ReactDOM.render(<TodoApp />, document.getElementById("app"));
+// saving the data entered to retrieve later
+
+// grab the text in a variable and save to local storage
+// let list = {};
+// let saveText = document.getElementsByTagName('li');
+// let keys = Object.keys(saveText);
+// let current = new Date();
+// for (let i = 0; 1 < keys.length; i++){
+//   list[keys[i]] = saveText[i];
+// }
+// saveText.forEach((item) => {localStorage.setItem(Object.keys(saveText[item]), saveText[item])});
+//     console.log(list);
+
+// }
+
+const myTodoList = 'myList';
+//I dont know if this working right.
+function saveList(todo) {
+  if (!localStorage.getItem(myTodoList)) {
+    let storage = [];
+    storage.push(todo);
+    localStorage.setItem(myTodoList, JSON.stringify(storage));
+  } else {
+    let storage = JSON.parse(localStorage.getItem(myTodoList));
+    localStorage.setItem(myTodoList, JSON.stringify(storage));
+    console.log(storage);
+  }
+}
