@@ -91,7 +91,7 @@ ul li.checked {
 } */
 
 .close:hover {
-    background: khaki;/*WhiteSmoke*/
+    background: #800000;/*Maroon*/
 }
 
 #bottomRow {
@@ -105,7 +105,7 @@ ul li.checked {
     font-size: small;
     color: rgb(160, 140, 140);/*WhiteSmoke*/
     width: 25%;
-    background-color: white;/*WhiteSmoke*/
+    background-color: #F8F8FF;/*GhostWhite*/
     border-radius: 10px;
     border-style: none;
 }
