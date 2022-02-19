@@ -15,17 +15,45 @@
         <p>The fact that functions are first-class objects means they can have properties and methods themselves.</p>
         <h4>Call and Apply Methods</h4>
         <p>The call() method can be used to set the value of this inside a function to an object that is provided as the first argument.</p>
+        <h4>Memoization</h4>
+        <p>A useful feature of this is that it provides result caching, or memoization.</p>
+        <p>If a function takes some time to compute a return value, we can save the result in a cache property. 
+           Then if the same argument is used again later, we can return the value from the cache, rather than having to compute the result again. </p>
         <h3>Immediately Invoked Function Expressions</h3>
+        <p>An Immediately Invoked Function Expression – or IIFE – (pronounced 'iffy') is an anonymous function that, as the name suggests, is invoked as soon as it’s defined. 
+            This is easily achieved by placing parentheses at the end of the function definition (remember we use parentheses to invoke a function). </p>
         <h3>Functions that Define and Rewrite Themselves</h3>
+        <p>The dynamic nature of JavaScript means that a function is able to not only call itself, but define itself, and even redefine itself. 
+            This is done by assigning an anonymous function to a variable that has the same name as the function.</p>
         <h3>Recursive Functions</h3>
+        <p>A recursive function is one that invokes itself until a certain condition is met. It’s a useful tool to use when iterative processes are involved. </p>
         <h3>Callbacks</h3>
+        <p>We covered callbacks in Chapter 4. You’ll recall that they’re functions passed to other functions as arguments and then invoked inside the function they are passed to.</p>
+        <h4>Event-driven Asynchronous Programming</h4>
+        <p>Callbacks can be used to facilitate event-driven asynchronous programming. 
+           JavaScript is a single-threaded environment, which means only one piece of code will ever be processed at a time. This may seem like a limitation, but non-blocking techniques can be used to ensure that the program continues to run. 
+           Instead of waiting for an event to occur, a callback can be created that’s invoked when the event happens. </p>
         <h3>Closures</h3>
+        <p>Closures are one of JavaScript’s most powerful features, but they can be difficult to get your head around initially.</p>
         <h3>Functional Programming</h3>
+        <p>Functional programming has gained momentum in recent years, with a dedicated following. 
+            The popularity of purely functional languages, such as Clojure, Scala and Erlang, sparked an interest in functional programming techniques that continues to grow. 
+            JavaScript has always supported functional-style programming due to functions being first-class objects. 
+            The ability to pass functions as arguments, return them from other functions, and use anonymous functions and closures, are all fundamental elements of functional programming that JavaScript excels at.</p>
         <h3>Getting Functional</h3>
     </article>
     <article>
         <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/13">Chapter 13</a></h5>
-        <h2></h2>
+        <h2>Ajax</h2>
+        <p>Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading. 
+           This enables data to be sent and received in the background, as well as portions of a page to be updated in response to user events, while the rest of the program continues to run.</p>
+        <h3>Clients and Servers</h3>
+        <h3>A Brief History of Ajax</h3>
+        <h3>The Fetch API</h3>
+        <h3>Receiving Information</h3>
+        <h3>Sending Information</h3>
+        <h3>FormData</h3>
+        <h3>A Living Standard</h3>
     </article>
     </body>
 </html>
