@@ -41,6 +41,7 @@
             JavaScript has always supported functional-style programming due to functions being first-class objects. 
             The ability to pass functions as arguments, return them from other functions, and use anonymous functions and closures, are all fundamental elements of functional programming that JavaScript excels at.</p>
         <h3>Getting Functional</h3>
+        <p>Advocates of functional programming can be quite partisan about its benefits. But even adopting some of its principles, such as keeping functions as pure as possible, and keeping changes in state to a minimum, will help improve the standard of your programming.</p>
     </article>
     <article>
         <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/13">Chapter 13</a></h5>
@@ -48,12 +49,40 @@
         <p>Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading. 
            This enables data to be sent and received in the background, as well as portions of a page to be updated in response to user events, while the rest of the program continues to run.</p>
         <h3>Clients and Servers</h3>
+        <p>The web of computers known as the internet can be separated into two parts: clients and servers. 
+           A client, such as a web browser, will request a resource (usually a web page) from a server, which processes the request and sends back a response to the client.</p>
         <h3>A Brief History of Ajax</h3>
+        <p>When the World Wide Web started, web pages contained static content. Any changes to the content on the page required a full page reload, often resulting in the screen going blank while the new page loaded. Remember, this was back in the 1990s, when dial-up modems were the norm.
+        In 1999, Microsoft implemented the XMLHTTP ActiveX control in Internet Explorer 5. It was developed initially for the Outlook web client, and allowed data to be sent asynchronously in the background using JavaScript. Other browsers implemented this technique, although it remained a relatively unknown feature, and was rarely used.
+        Asynchronous loading techniques started to be noticed when Google launched Gmail and Google Maps in 2004 and 2005 respectively. These web applications used asynchronous loading techniques to enhance the user experience by changing the parts of the page without a full refresh. This gave them a much snappier and responsive quality that felt more like a desktop application.
+        The term 'Ajax' was coined by Jesse James Garrett in 2005 in the article “Ajax: A New Approach to Web Applications,” where he referred to techniques being used by Google in its recent web applications. Ajax was a neat acronym that referred to the different parts of the process being used: Asynchronous JavaScript and XML:</p>
+        <ul>
+            <li>Asynchronous</li>
+            <li><p>When a request for data is sent, the program doesn’t have to stop and wait for the response. It can carry on running, waiting for an event to fire when a response is received. 
+                   By using callbacks to manage this, programs are able to run in an efficient way, avoiding lag as data is transferred back and forth.</p></li>
+            <li>JavaScript</li>
+            <li><p>JavaScript was always considered a 'front-end' language, not used to communicate with the server. Ajax enabled JavaScript to send requests and receive responses from a server, allowing content to be updated in real time.</p></li>
+            <li>XML</li>
+            <li><p>When the term Ajax was originally coined, XML documents were often used to return data. 
+                   Many different types of data can be sent, but by far the most commonly used in Ajax nowadays is JSON, which is more lightweight and easier to parse than XML. 
+                   (Although it has never really taken off, the term Ajaj is sometimes used to describe the technique.) JSON also has the advantage of being natively supported in JavaScript, so you can deal with JavaScript objects rather than having to parse XML files using DOM methods.</p></li>
+        </ul>
         <h3>The Fetch API</h3>
+        <p>The XMLHttpRequest object was finally standardized by the WHATWG and W3C as part of the HTML5 specification, despite it originally being implemented by Microsoft many years earlier, and already available in most browsers.</p>
         <h3>Receiving Information</h3>
+        <p>One will request plain text and the other will request a JSON string from an external API. The div with an id of 'output' will be where we’ll insert the response we receive from the Ajax request.</p>
         <h3>Sending Information</h3>
+        <p>We can also use Ajax to send information. This can be a variety of formats, but is usually a JSON string.
+           To illustrate this, we're going to create a very simple To Do list application that sends information about a task to a server in JSON format, then receives a response to confirm that the task has been saved on a server.</p>
         <h3>FormData</h3>
+        <p>The Fetch API includes the FormData interface, which makes it much easier to submit information in forms using Ajax.</p>
         <h3>A Living Standard</h3>
+        <p>The Fetch API is, at the time of writing, what is known as a 'living standard', which means that the specification is being developed 'in the wild'. 
+           This means that, despite it being available to use, it’s still subject to change as developers, browser vendors and end-users provide feedback about how it works. 
+           It’s an experimental technology, and new features might get added, or the syntax and behavior of some properties and methods might change in the future. 
+           Don't let this put you off though – living standards often stay relatively stable, especially once they are implemented in browser engines. 
+           The latest versions of most browsers already support it (all, except Internet Explorer, anyway), but you should check the level of support before using it in production. 
+           By using it you are helping to develop future standards. Just make sure you keep up-to-date with the current specification.</p>
     </article>
     </body>
 </html>
