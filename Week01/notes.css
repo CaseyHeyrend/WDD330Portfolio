@@ -7,4 +7,5 @@ h1 {
 }
 p {
     text-indent: 30px;
+    white-space: wrap;
 }
