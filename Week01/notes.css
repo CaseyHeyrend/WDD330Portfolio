@@ -5,3 +5,6 @@ body {
 h1 {
     text-decoration: underline;
 }
+p {
+    text-indent: 30px;
+}
