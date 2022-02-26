@@ -16,11 +16,52 @@
         <p>Our page is fairly static. Actually, it’s completely static. In Chapter 4 we learned a little about how to alter a form’s appearance based on its state with the :invalid and :valid pseudo-classes. 
             But what about really moving things around? What about changing the appearance of elements, such as rotating or skewing them?</p>
         <h3>Transforms</h3>
-        <p>The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page. 
+            <p>The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page. 
             While some of these effects were possible using previously existing CSS features (such as translating with relative and absolute positioning), CSS3 gives you unprecedented control over many more aspects of the element’s appearance.</p>
+            <p>We can manipulate an element’s appearance using transform functions. 
+            The value of the transform property is one or more transform functions (separated by spaces) that will be applied in the order they’re provided. </p>
+        <h4>Translation</h4>
+        <p>Translation functions allow you to move elements left, right, up, or down. 
+            These functions are similar to the behavior of position: relative; when declaring top and left, moving elements up and down or left and right along the x and y axes.</p>
+        <h4>Scaling</h4>
+        <p>The scale(x,y) function scales an element by the defined factors horizontally then vertically. 
+            If only one value is provided, it will be used for both the x and y values, growing or shrinking your element or pseudo-element while maintaining the original aspect ratio. </p>
+            <h4>Rotation</h4>
+            <p>The rotate() function rotates an element around the point of origin by a specified angle value. 
+                As with scale, by default the point of origin is the element’s center. </p>
+             <h4>Skew</h4>   
+             <p>The skew(x,y) function specifies a skew along the x and y axes. 
+                As you’d expect, the x specifies the skew on the x axis, and the y specifies the skew on the y axis. </p>    
         <h3>Transitions</h3>
-        <p></p>
+        <p>Animation has certainly been possible for some time with JavaScript, but native CSS transitions generally require less client-side processing, so they’ll usually appear smoother. 
+            On mobile devices with limited computing power, this can be a lifesaver.</p>
+        <p>Transitions allow the values of CSS properties to change over time, essentially providing simple animations. For example, if a link changes color on hover, you can have it gradually fade from one color to the other instead of a sudden change. 
+            They’re both transitions, but with the CSS transition property the color transition can be gradual. 
+            If the browser lacks support for transitions, the change will be immediate instead of gradual, which is fine and accessible.</p>
+        <p>Here are the steps to create a simple transition using only CSS:</p>
+        <ol>
+            <li>Declare the original state of the element in the default style declaration.</li>
+            <li>Declare the final state of your transitioned element; for example, a :hover state.</li>
+            <li>Include the transition functions in your default style declaration using the transition properties, including: transition-property, transition-duration, transition-timing-function, and transition-delay. We’ll look at each of these and how they work shortly.</li>
+        </ol>
+        <h4>transition-property</h4>
+        <p>The transition-property property defines the CSS properties of the element that should be transitioned, with all for all properties being the default.</p>
+        <h4>The transition-duration Property</h4>
+        <p>The transition-duration property sets how long the transition will take: the duration of time it takes to go from the default state to the transitioned state. 
+            You can specify this either in seconds (s) or milliseconds (ms). </p>
+        <h4>The transition-timing-function Property</h4>
+        <p>The transition-timing-function lets you control the pace of the transition in even more granular detail.</p>
         <h3>Animations</h3>
+        <p>Transitions animate elements over time; however, they’re limited in what they can do. You can define starting and ending states, but there’s no fine-grained control over any intermediate states. CSS animations, unlike transitions, allow you to control each step of an animation via keyframes.</p>
+        <p>All modern browsers support CSS animation, starting with IE10, though we still require the -webkit- prefix in iOS8, Android 4.4.3, and BlackBerry 10. 
+            IE10 is unprefixed. Firefox 16, Chrome 39, and Opera 26 dropped their need for a prefix for CSS animations.</p>
+            <p>The lack of powerful processors on many mobile devices makes CSS animations a great alternative to weighty, CPU-intensive JavaScript animation. 
+                Generally, it is best to use CSS for simple-state changes in a mobile environment. But it’s still better to employ JavaScript for intricate, stateful UIs, and when you do, you’ll likely want to use a JavaScript animation library to help with manageability and performance.</p>
+            <h4>Keyframes</h4>
+            <p>To animate an element in CSS, you first create a named animation, then attach it to an element in that element’s property declaration block. Animations in themselves don’t do anything; in order to animate an element, you’ll need to associate the animation with that element.
+            To create an animation, use the @keyframes rule for IE10+ and FF16+. Include @-webkit-keyframes for all WebKit implementations followed by a name of your choosing, which will serve as the identifier for the animation. Then, you can specify your keyframes.</p>
+            <h4>Animation Properties</h4>
+            <p></p>
         <h3>Moving On</h3>
         <p>With transforms, transitions, and animations, our site is looking more dynamic. 
             Remember the old maxim, though: just because you can, doesn’t mean you should. 
