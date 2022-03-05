@@ -12,11 +12,76 @@
     <h1>JavaScript: Novice to Ninja, 2nd Edition</h1>
     <article>
         <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/9/">Chapter 9</a></h5>
-
+        <h2>The Window Object</h2>
+        <p>Every JavaScript environment has a global object. 
+            Any variables that are created in the global scope are actually properties of this object, and any functions are methods of it. In a browser environment the global object is the window object, which represents the browser window that contains a web page.
+        </p>
+        <h3>The Browser Object Model</h3>
+        <h3>Browser Information</h3>
+        <p>The window object has a number of properties and methods that provide information about the user’s browser.</p>
+        <h3>The Browser History</h3>
+        <p>The window.history property can be used to access information about any previously visited pages in the current browser session. Avoid confusing this with the new HTML5 History API. </p>
+        <p>The window.history.length property shows how many pages have been visited before arriving at the current page.</p>
+        <h3>Controlling Windows</h3>
+        <p>A new window can be opened using the window.open() method. This takes the URL of the page to be opened as its first parameter, the window title as its second parameter, and a list of attributes as the third parameter. </p>
+        <h3>Screen Information</h3>
+        <p>The window.screen object contains information about the screen the browser is displayed on. </p>
+        <h3>The Document Object</h3>
+        <p>Each window object contains a document object. This object has properties and methods that deal with the page that has been loaded into the window. In Chapter 6, we covered the Document Object Model and the properties and methods used to manipulate items on the page. The document object contains a few other methods that are worth looking at.</p>
+        <h4>document.write()</h4>
+        <p>The write() method simply writes a string of text to the page. If a page has already loaded, it will completely replace the current document.</p>
+        <h3>Timing Functions</h3>
+        <h4>setTimeout()</h4>
+        <p>The window object provides some useful methods for scheduling the execution of a function, and for repeatedly executing functions at regular intervals.</p>
+        <h3>setInterval()</h3>
+        <p>The window.setInterval() method works in a similar way to window.setTimeout(), except that it will repeatedly invoke the callback function after every given number of milliseconds.</p>
+        <h3>Animation</h3>
+        <p>The setTimeOut() and setInterval() methods can be used to animate elements on a web page. As an example, let’s create a web page that shows a colored square, and make it rotate. </p>
     </article>
     <article>
         <h5><a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/14/">Chapter 14</a></h5>
-
+        <h2>HTML5 APIs</h2>
+        <p>HTML5 is the latest version of the Hypertext Markup Language used to create web pages. The latest iteration is HTML 5.1, which finally became a W3C recommendation in November 2016.</p>
+        <h3>HTML5</h3>
+        <p>The W3C plans to develop future versions of HTML5 much more frequently than previously, using smaller version increments. HTML 5.1 has already become the latest standard, and HTML 5.2 is in development.</p>
+        <h3>The data- Attribute</h3>
+        <p>The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser. They’re also private to a page, so are not intended to be used by an external service – their sole purpose is to be used by a JavaScript program. </p>
+        <p>The names of these attributes can be decided by the developer, but they must use the following format:</p>
+        <ul>
+            <li>Start with data-.</li>
+            <li>Contain only lowercase letters, numbers, hyphens, dots, colons or underscores.</li>
+            <li>Include an optional string value.</li>
+        </ul>
+        <h3>HTML5 APIs</h3>
+        <p>The HTML5 specification contains a number of APIs that help to gain access to hardware, such as cameras, batteries, geolocation, and the graphics card. Hardware evolves quickly, and APIs are frequently introduced to give developers access, and control new features that appear in the latest devices.</p>
+        <h4>HTML5 Web Storage</h4>
+        <p>The Web Storage API provides a key-value store on the client’s computer that is similar to using cookies but has fewer restrictions, more storage capacity, and is generally easier to use.</p>
+        <p>The Web Storage API has some crucial differences with cookies:</p>
+        <ul>
+            <li>Information stored is not shared with the server on every request.</li>
+            <li>Information is available in multiple windows of the browser (but only if the domain is the same).</li>
+            <li>Storage capacity limit is much larger than the 4KB limit for cookies ( There is no actual limit in the specification, but most browsers have a limit set at 5GB per domain.).</li>
+            <li>Any data stored does not automatically expire as it does with cookies. This potentially makes cookies a better choice for something like showing a popup once a day.</li>
+        </ul>
+        <p>Every time a value is saved to local storage, a storage event is fired. Note that this event is only fired on any other windows or tabs from the same domain, and only if the value of the item being saved changes. The event object sent by the event listener to the callback has a number of properties that provide information about the updated item:</p>
+        <ul>
+            <li>key tells us the key of the item that changed</li>
+            <li>newValue tells us the new value to which it has been changed</li>
+            <li>oldValue tells us the previous value before it was changed</li>
+            <li>storageArea tells us if it is stored in local or session storage.</li>
+        </ul>
+        <h4>Geolocation</h4>
+        <p>The Geolocation API is used to obtain the geographical position of the device. This means it can be used to find the user’s exact location, then link to nearby places or measure the speed at which the user is moving. This information can then be used to filter data based on the user's location or speed and direction of travel. </p>
+        <p>The position object has several other properties that can be used to find out information about the location and movement of the device:</p>
+        <ul>
+            <li> position.speed property returns the ground speed of the device in meters per second.</li>
+            <li> position.altitude property returns an estimate of the device’s altitude in meters above the WGS84 ellipsoid, which is a standard measurement for the center of the Earth.</li>
+            <li> position.heading property returns the direction the device is moving in. This is measured as a bearing in degrees, clockwise from North.</li>
+            <li> position.timestamp property returns the time that the position information was recorded. </li>
+        </ul>
+        <h3>Other APIs</h3>
+        <h3>Drawing with Canvas</h3>
+        <h3>Shims and Polyfills</h3>
     </article>
 </body>
 </html>
