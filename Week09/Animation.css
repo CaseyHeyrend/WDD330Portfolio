@@ -1,0 +1,22 @@
+#square {
+    margin: 200px;
+    width: 200px;
+    height: 200px;
+    background: #663399;/*RebeccaPurple*/
+}
+
+#square2 {
+    margin: 200px;
+    width: 200px;
+    height: 200px;
+    background: #8FBC8B;/*DarkSeaGreen*/
+}
+
+#square3 {
+    margin: 200px;
+    width: 200px;
+    height: 200px;
+    background: #008000;/*Green*/
+    animation: spin 22s linear infinite;
+}
+@keyframes spin { from { transform:rotate(0deg); } to { transform:rotate(3600deg); } }
