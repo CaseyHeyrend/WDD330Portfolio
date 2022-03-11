@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Local Quakes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <main>
+    <h1>Quake List</h1>
+
+    <div class="filters">
+      <label for="radius">Radius:</label>
+      <input type="number" name="radius" id="radius" placeholder="100" value="100" />
+      <button id="search">Search Quakes</button>
+    </div>
+
+    <ul id="quakeList"></ul>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

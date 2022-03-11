@@ -1,0 +1,21 @@
+main {
+  max-width: 930px;
+  margin: 0 auto;
+  background-color: rgb(223, 176, 176);
+  padding: 1em;
+}
+
+#quakeList {
+  border: 1px solid rgba(0, 0, 0, .6);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+li {
+  list-style: none;
+  margin-bottom: .25rem;
+}
+
+.quake-time {
+  margin-bottom: 1px solid black;
+}
