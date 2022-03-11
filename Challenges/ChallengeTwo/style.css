@@ -1,0 +1,239 @@
+body {
+    background: linear-gradient(rgb(89, 89, 252) 0%, rgb(2, 185, 2) 50%, rgb(89, 89, 255) 100%);
+}
+
+h1 {
+    color: rgb(201, 202, 221);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: xx-large;
+}
+
+a {
+    color: white;
+    font-size: 12px;
+    text-align: left;
+}
+
+.container {
+    width: 65%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background: linen;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: auto;
+}
+
+#loadInfo {
+    height: auto;
+    width: 65%;
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    padding-bottom: 10px;
+    line-height: 30px;
+}
+input {
+    background-color: rgb(219, 246, 255);
+}
+
+/* checks any valid <input> */
+input:valid {
+    background-color: rgba(0, 128, 0, 0.13);
+    padding: 14px 35px;
+    border-radius: 8px;
+}
+
+input:invalid {
+    padding: 14px 35px;
+    border-radius: 8px;
+    border: 2px solid red;
+    box-shadow: 0 2px 5px 0 red, 0 2px 5px 0 red;
+  }
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:valid */
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid rgb(34, 66, 124);
+    font-size: larger;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    text-align: center;
+    width: auto;
+}
+
+footer {
+    text-align: center;
+    color: cornsilk;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+i {
+    font-size: smaller;
+}
+
+.forecast {
+    padding: 10px 25px;
+    width: 150px;
+}
+
+#forecastOutput {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    height: auto;
+    width: 55%;
+    overflow-x: scroll;
+    padding: 0 25px;
+}
+
+div {
+    text-align: center;
+}
+
+#weatherAlert {
+    font-family: Arial, Helvetica, sans-serif;
+    color:greenyellow;
+    width: 90%;
+    margin: auto;
+}
+
+#icon {
+    background-color: rgb(160, 217, 236);
+    width: 100px;
+    height: auto;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#initialLoad {
+    font-size: 42px;
+    line-height: 50px;
+    width: auto;
+    height: auto;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    padding: 15px;
+}
+
+#buttons {
+    padding: 25px;
+}
+
+.explain {
+    text-align: left;
+    align-self: center;
+    line-height: normal;
+    font-style: italic;
+    font-size: small;
+}
+
+#dark {
+  float: right;
+  padding: 25px 5px;
+  border-radius: 45px;
+  border: 1px solid slategray;
+  position: fixed;
+  top: 150px;
+  right: 10px;
+  background-color: rgb(9, 9, 65);
+  color: white;
+}
+
+/*     Dark mode settings toggled onclick of button     */
+body.dark-theme {
+    background: linear-gradient(rgb(0, 0, 110) 0%, rgb(0, 0, 0) 50%, rgb(0, 0, 110) 100%);
+}
+
+body.dark-theme h1{
+    color: lightgray;
+    
+}
+
+body.dark-theme a{
+    color: lightgray;
+}
+
+body.dark-theme .container{
+    border: 1px solid gray;
+    background-color: rgb(66, 66, 66);
+    color: rgb(194, 194, 194);
+    box-shadow:  0 12px 16px 0 rgba(143, 143, 143, 0.24), 0 12px 16px 0 rgba(143, 143, 143, 0.19);;
+}
+
+body.dark-theme input:valid{
+    background-color: rgb(139, 163, 139);
+}
+
+body.dark-theme .button {
+    background-color: #2a5f2c;
+    color: rgb(12, 12, 12);
+}
+
+body.dark-theme #initialLoad{
+    background-color: gray;
+    border: 1px solid black;
+    color: black;
+}
+
+body.dark-theme footer {
+    color: rgb(139, 163, 139);
+}
+
+body.dark-theme #weatherAlert {
+    color:rgba(172, 255, 47, 0.514);
+}
+ 
+body.dark-theme div.explain {
+    background-color: darkgrey;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+body.dark-theme #dark {
+    background-color: rgb(255, 255, 126);
+    color: black;
+}
