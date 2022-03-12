@@ -1,11 +1,12 @@
 main {
   max-width: 930px;
   margin: 0 auto;
-  background-color: rgb(223, 176, 176);
+  
   padding: 1em;
 }
 
 #quakeList {
+  background-color: #DEB887;/* BurlyWood */
   border: 1px solid rgba(0, 0, 0, .6);
   padding: 1rem;
   margin: 1rem;
