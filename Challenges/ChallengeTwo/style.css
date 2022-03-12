@@ -1,5 +1,5 @@
 body {
-    background:#F0F8FF;
+    background:#696969;/*DimGray*/
 }
 
 h1 {
@@ -23,7 +23,7 @@ a {
     flex-direction: column;
     border: 1px solid gray;
     border-radius: 10px;
-    background: #F5F5F5;/*WhiteSmoke*/
+    background: #A9A9A9;/*DarkGray*/
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
