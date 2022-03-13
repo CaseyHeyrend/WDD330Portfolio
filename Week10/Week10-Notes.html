@@ -39,11 +39,41 @@
                 <li>Built-in form validation uses HTML5 form validation features, which we've discussed in many places throughout this module. This validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation.</li>
                 <li>JavaScript validation is coded using JavaScript. This validation is completely customizable, but you need to create it all (or use a library).</li>
             </ul>
-            <h2></h2>
+            <h2>Validating forms using JavaScript</h2>
     </article>
     <br>
     <article>
         <h5><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">MDN: Using Fetch</a></h5>
+        <h1>Using the Fetch API</h1>
+        <p>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses. It also provides a global fetch() method that provides an easy, logical way to fetch resources asynchronously across the network.</p>
+        <h2>Response objects</h2>
+        <p>As you have seen above, Response instances are returned when fetch() promises are resolved.
+
+            The most common response properties you'll use are:</p>
+            <ul>
+                <li>Response.status — An integer (default value 200) containing the response status code.</li>
+                <li>Response.statusText — A string (default value ""), which corresponds to the HTTP status code message. Note that HTTP/2 does not support status messages.</li>
+                <li>Response.ok — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a boolean value.</li>
+            </ul>
+        <h2>Body</h2>
+        <p>Both requests and responses may contain body data. A body is an instance of any of the following types:</p>
+        <ul>
+            <li>ArrayBuffer</li>
+            <li>ArrayBufferView (Uint8Array and friends)</li>
+            <li>Blob/File</li>
+            <li>string</li>
+            <li>URLSearchParams</li>
+            <li>FormData</li>
+        </ul>
+        <p>The Request and Response interfaces share the following methods to extract a body. These all return a promise that is eventually resolved with the actual content.</p>
+        <ul>
+            <li>Request.arrayBuffer() / Response.arrayBuffer()</li>
+            <li>Request.blob() / Response.blob()</li>
+            <li>Request.formData() / Response.formData()</li>
+            <li>Request.json() / Response.json()</li>
+            <li>Request.text() / Response.text()</li>
+        </ul>
+        <h2>Feature detection</h2>
     </article>
      
 </body>
