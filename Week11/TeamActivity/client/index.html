@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 11 Client</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <form action="http://localhost:3000/login">
+    <fieldset>
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" value="user1@email.com">
+    </fieldset>
+    <fieldset>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" value="user1">
+    </fieldset>
+    <input type="button" value="Login" id="login-btn">
+  </form>
+
+  <ul id="posts"></ul>
+
+  <div id="errors" class="errors hidden"></div>
+  <form action="http://localhost:3000/post">
+    <fieldset>
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title" value="New post #">
+    </fieldset>
+    <fieldset>
+      <label for="content">Content</label>
+      <textarea name="content" id="content" cols="30" rows="10">This is the beginning of my long post. Today I...</textarea>
+    </fieldset>
+    <input type="button" value="Save" id="save-btn">
+  </form>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>
