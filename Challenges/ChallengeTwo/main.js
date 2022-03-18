@@ -4,7 +4,7 @@ import {
     getLocation,
     inputCheck,
     windDirection
-} from 'functions.js';
+} from './functions.js';
 
 // global variables
 let latitude, longitude, zip, cityname;
@@ -284,3 +284,4 @@ function sunSky() {
             `;
         })
         .catch(error => console.log('There was an error:', error));
+}
