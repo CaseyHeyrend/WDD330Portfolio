@@ -4,11 +4,22 @@ html{
   }
 body{
     position: relative;
-    margin: 1;
-    padding-bottom: 3px;
+    margin: 0;
+    padding-bottom: 6rem;
     padding-left: 10px;
     min-height: 100%;
-    background-color:#00FF7F;/*SpringGreen*/
+    background-color:#F08080;/*LightCoral*/
+  }
+
+  header > #bubble {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    width: 70%;
+    flex-wrap: wrap;
+    background-color:#DC143C;/*Crimson*/
+    border-radius: 10px;
   }
   ul{
     list-style: none;
@@ -20,7 +31,7 @@ body{
     justify-content: center;
     width: 70%;
     flex-wrap: wrap;
-    background-color:#4682B4;/*SteelBlue*/
+    background-color:#FFDAB9;/*PeachPuff*/
     border-radius: 10px;
   }
   #container > div {
@@ -30,7 +41,6 @@ body{
     font-size: 15px;
     border-radius: 10px;
     width: 15%;
-    box-shadow: 5px 5px 5px;
 
   }
   #blocks{
@@ -41,38 +51,6 @@ body{
   li{
     color:	#000000;/*Black*/
   }
-
-  footer{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    text-align: center;
-  }
-  footer ul{
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin: 0; 
-}
-footer li{
-  font-family: "daniel", sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  height: 40px;
-}
-@media screen and (min-width: 600px) {
-  footer li {
-    width: 120px;
-    border-bottom: none;
-    height: 50px;
-    line-height: 25px;
-    font-size: 1.2em;
-    display: inline-block;
-    margin-right: -4px;
-  }
-}
 h1{
   text-align: center;
 }
@@ -81,4 +59,61 @@ h2{
 }
 h3{
   text-align: center;
+}
+footer{
+    background-color: #E0FFFF;/* LightCyan  */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
+    border-style: solid;
+    border-color: #000000;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+}
+#bfnav ul{
+  list-style: none;
+  background-color: #E0FFFF;/* LightCyan  */
+  text-align: center;
+  padding: 0;
+  margin: 0; 
+  word-spacing: value;
+}
+#bfnav li{
+  font-family: "daniel", sans-serif;
+  font-size: 1em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid;
+  word-spacing: normal;
+}
+
+#bfnav a {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+  transition: .3s background-color;
+}
+#bfnav a:hover {
+  background-color: #AFEEEE;/* PaleTurquoise  */
+}
+
+#bfnav a.active {
+  background-color:#AFEEEE;/* PaleTurquoise  */
+  color: #AFEEEE;/* PaleTurquoise  */
+  cursor: default;
+}
+@media screen and (min-width: 600px) {
+  #bfnav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    display: inline-block;
+    margin-right: -4px;
+  }
 }
