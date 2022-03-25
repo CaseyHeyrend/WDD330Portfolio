@@ -53,7 +53,3 @@ export function windDirection(degrees) {
     const windDir = windArray[Math.ceil(degrees / 22.5) % 16];
     return windDir;
 }
-
-export function darkMode() {
-    document.body.classList.toggle('dark-theme');
-}

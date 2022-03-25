@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
     <title>Challenge 2</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
     <header>
         <nav>
             <h1>Weather Application</h1>
             <a href="https://caseyheyrend.github.io/WDD330Portfolio/">Back to Index</a>
+            <!--No Light Mode-->
         </nav>
-        <hr>
-        <br>
-        <br>
-        <br>
     </header>
+    <!-- Start container -->
     <div class="container">
         <h2 id="dateTime"></h2>
         <div id="loadInfo">
-            <div id="icon"><img src='Clouds.png' alt="image of weather" id="tempIcon"></div>
+            <div id=""><img src='' alt="" id="tempIcon"></div>
             <br>
             <div id="zipCheck">Zip Code Required</div><br>
-            <input type="text" id="zipCode" placeholder="83441" maxlength="5" required>
+            <input type="text" id="zipCode" placeholder="83442" maxlength="5" required>
             <br><br>
             <div id='output'></div>
             <div id='forecastOutput'></div>
@@ -32,15 +30,14 @@
             <button class="button" id="weather">Weather</button>
             <button class="button" id="air">Air Quality</button>
             <button class="button" id="forecast">Forecast</button>
-            <button class="button" id="uv">UV Index</button>
             </div>
         </div>
-    </div> <!-- end container or the main text -->
-    <div id="weatherAlert">
-
+        <a href="https://www.flaticon.com/free-icons/clouds" title="clouds icons">Clouds icons created by surang - Flaticon</a>
     </div>
+    <!-- End container -->
+    <footer>
+
+    </footer>
     <script src="main.js" type="module"></script>
-
 </body>
-
 </html>
