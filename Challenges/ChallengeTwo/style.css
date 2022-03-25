@@ -1,5 +1,7 @@
 body {
-    background:#696969;/*DimGray*/
+    background: url(https://images.pexels.com/photos/4737484/pexels-photo-4737484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);/*Photo by Rafael Cerqueira: https://www.pexels.com/photo/blue-and-white-sky-with-stars-4737484/ */
+    background-size: cover;
+    background-repeat: repeat-y;
 }
 
 h1 {
