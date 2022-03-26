@@ -8,7 +8,9 @@ body{
     padding-bottom: 6rem;
     padding-left: 10px;
     min-height: 100%;
-    background-color:#F08080;/*LightCoral*/
+    background:url(https://images.pexels.com/photos/1146134/pexels-photo-1146134.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);/*Photo by Felix Mittermeier: https://www.pexels.com/photo/galaxy-1146134/*/
+    background-size: cover;
+    background-repeat: repeat-y;
   }
 
   header > #bubble {
