@@ -16,6 +16,16 @@ a {
     font-size: 12px;
     text-align: left;
 }
+header > #clouds{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    width: 70%;
+    flex-wrap: wrap;
+    background-color:#C0C0C0;/*Silver*/
+    border-radius: 10px;
+}
 
 .container {
     width: 65%;
@@ -61,14 +71,14 @@ input:valid {
 input:invalid {
     padding: 14px 35px;
     border-radius: 8px;
-    border: 2px solid red;
-    box-shadow: 0 2px 5px 0 red, 0 2px 5px 0 red;
+    border: 2px solid #B22222;/* FireBrick */
+    box-shadow: 0 2px 5px 0 #B22222, 0 2px 5px 0 #B22222;
   }
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:valid */
 
 .button {
-    background-color: #C0C0C0;
+    background-color: #4682B4;/*SteelBlue */
     border: none;
     color: black;
     padding: 16px 32px;
