@@ -75,7 +75,6 @@ input:invalid {
     box-shadow: 0 2px 5px 0 #B22222, 0 2px 5px 0 #B22222;
   }
 
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/:valid */
 
 .button {
     background-color: #4682B4;/*SteelBlue */
