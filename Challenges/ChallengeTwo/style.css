@@ -37,7 +37,7 @@ header > #clouds{
     border-radius: 10px;
     background: #A9A9A9;/*DarkGray*/
     align-items: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
 }
 
 #loadInfo {
@@ -58,12 +58,12 @@ header > #clouds{
     line-height: 30px;
 }
 input {
-    background-color: rgb(219, 246, 255);
+    background-color: rgb(240, 255, 255);/* Azure */
 }
 
 /* checks any valid <input> */
 input:valid {
-    background-color: rgba(0, 128, 0, 0.13);
+    background-color: rgb(240, 255, 240);/* HoneyDew */
     padding: 14px 35px;
     border-radius: 8px;
 }
@@ -71,7 +71,7 @@ input:valid {
 input:invalid {
     padding: 14px 35px;
     border-radius: 8px;
-    border: 2px solid #B22222;/* FireBrick */
+    border: 2px solid #DC143C;/* Crimson */
     box-shadow: 0 2px 5px 0 #B22222, 0 2px 5px 0 #B22222;
   }
 
