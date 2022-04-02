@@ -193,7 +193,7 @@ function forecast() {
     forecastOutput.style.display = 'flex';
     fetch(forecastURL + zip + forecastAPI)
         .then(response => {
-            outputDiv.innerHTML = 'Waiting for response...verify valid zip code entered';
+            outputDiv.innerHTML = 'Waiting for response...Verify valid zip code entered';
             if (response.ok) {
                 return response;
             }
@@ -236,7 +236,7 @@ function sunSky() {
     forecastOutput.style.display = 'none';
     fetch(weatherURL + zip + weatherAPI)
         .then(response => {
-            outputDiv.innerHTML = 'Waiting for response...verify valid zip code entered';
+            outputDiv.innerHTML = 'Waiting for response...Verify valid zip code entered';
             if (response.ok) {
                 return response;
             }
