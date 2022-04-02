@@ -22,6 +22,7 @@ body{
     flex-wrap: wrap;
     background-color:#DC143C;/*Crimson*/
     border-radius: 10px;
+    font-family: 'Belgrano',  serif;
   }
   ul{
     list-style: none;
