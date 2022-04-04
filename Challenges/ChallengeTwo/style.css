@@ -6,7 +6,7 @@ body {
 
 h1 {
     color: #000000;
-    font-family: 'Belgrano',  serif;
+    font-family: 'Belgrano', serif;
     text-align: center;
     font-size: 35px;;
 }
@@ -36,7 +36,7 @@ header > #clouds{
     border-radius: 10px;
     background: #A9A9A9;/*DarkGray*/
     align-items: center;
-    font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+    font-family: "daniel", sans-serif;;
 }
 
 #loadInfo {
@@ -51,7 +51,7 @@ header > #clouds{
     width: 90%;
     height: auto;
     margin: auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "daniel", sans-serif;
     font-size: larger;
     padding-bottom: 10px;
     line-height: 30px;
@@ -110,7 +110,7 @@ li {
 footer {
     text-align: center;
     color: cornsilk;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Belgrano', serif;
     font-weight: 100;
 }
 
@@ -138,7 +138,7 @@ div {
 }
 
 #weatherAlert {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Belgrano', serif;
     color:#228B22;/* ForestGreen */
     width: 90%;
     margin: auto;
@@ -163,7 +163,7 @@ div {
     text-align: center;
     background-color: white;
     border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Belgrano', serif;
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     padding: 15px;
 }
