@@ -89,7 +89,7 @@ footer{
 #bfnav li{
   font-family: "daniel", sans-serif;
   font-size: 1em;
-  line-height: 30px;
+  line-height: 20px;
   height: 20px;
   border-bottom: 1px solid;
   word-spacing: normal;
@@ -114,8 +114,8 @@ footer{
   #bfnav li {
     width: 120px;
     border-bottom: none;
-    height: 50px;
-    line-height: 50px;
+    height: 30px;
+    line-height: 30px;
     font-size: 1.4em;
     display: inline-block;
     margin-right: -4px;
