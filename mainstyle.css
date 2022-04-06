@@ -34,7 +34,6 @@ body{
     justify-content: center;
     width: 70%;
     flex-wrap: wrap;
-    background-color:#FFDAB9;/*PeachPuff*/
     border-radius: 10px;
   }
   #container > div {
